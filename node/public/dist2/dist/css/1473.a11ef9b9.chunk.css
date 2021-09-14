@@ -1,0 +1,118 @@
+.chartPage {
+  min-height: 200px;
+}
+.chartPage .wrap {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  overflow: auto;
+  max-height: 100vh;
+}
+.chartPage .el-table {
+  color: #262626;
+  border-color: #e5e5e5;
+}
+.chartPage .el-table__header-wrapper thead div,
+.chartPage .el-table__fixed-header-wrapper thead div,
+.chartPage .el-table__footer-wrapper thead div {
+  background-color: #f7f8fa;
+}
+.chartPage .el-table td,
+.chartPage .el-table th.is-leaf {
+  border-color: #e5e5e5;
+}
+.chartPage .table-cell {
+  max-width: 140px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.chartPage .el-table__header thead th {
+  background-color: #f7f8fa;
+}
+.chartPage .el-table__row td .cell {
+  padding: 0;
+}
+.chartPage .el-table .cell,
+.chartPage .el-table th > div {
+  padding: 0 2px;
+}
+.chartPage .el-table th,
+.chartPage .el-table th > .cell {
+  height: 30px;
+  font-size: 9px;
+  line-height: 30px;
+  text-align: center;
+  white-space: nowrap;
+}
+.chartPage .el-table__body tbody tr .cell {
+  font-size: 9px;
+  height: 16px;
+  line-height: 16px;
+}
+.chartPage .modifiedCell {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.chartPage .increasing {
+  color: #097511;
+  background-color: #c6eede;
+}
+.chartPage .decreasing {
+  color: #ca4949;
+  background-color: #ffecea;
+}
+.chartPage .description {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding-left: 8px;
+}
+.chartPage .description .item {
+  display: inline-block;
+  margin-left: 18px;
+}
+.chartPage .description .item .square {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+.chartPage .description .item span {
+  font-size: 12px;
+  margin-left: 8px;
+}
+.chartPage .description .item .red {
+  background-color: #d96969;
+}
+.chartPage .description .item .green {
+  background-color: #097511;
+}
+.chartPage .description .item .triangle {
+  width: 20px;
+  height: 10px;
+  position: relative;
+  display: inline-block;
+}
+.chartPage .description .item .triangle:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  height: 0;
+  width: 0;
+  border-left: 12px solid transparent;
+}
+.chartPage .description .item:first-child {
+  margin-left: 0;
+}
+.chartPage .greenTriangle:after {
+  border-top: 12px solid #097511;
+}
+.chartPage .redTriangle:after {
+  border-top: 12px solid #d96969;
+}
+.chartPage ::-webkit-scrollbar {
+  display: none;
+}
+

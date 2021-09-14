@@ -1,0 +1,217 @@
+.download {
+  box-sizing: border-box;
+}
+.download .filter {
+  width: 100%;
+  height: 60px;
+  padding: 12px 26px 0 18px;
+  box-sizing: border-box;
+}
+.download .filter .selWrap {
+  height: 36px;
+  display: flex;
+  padding: 0;
+}
+.download .filter .selWrap > div {
+  display: flex;
+  align-items: center;
+}
+.download .filter .selWrap > div > span {
+  min-width: 60px;
+  font-size: 14px;
+  padding: 0 18px 0 0;
+}
+.download .filter .selWrap .filter-box {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  height: 36px;
+  border: 1px solid #bfcbd9;
+}
+.download .filter .selWrap .time-setting-panel {
+  z-index: 1;
+}
+.download .filter .el-button {
+  padding: 8px 20px;
+}
+.download .filter .el-input .el-input__icon {
+  cursor: pointer;
+}
+.download .el-dialog--tiny {
+  width: 420px;
+}
+.download .el-dialog--tiny .el-dialog__body {
+  padding-bottom: 0;
+}
+.download .el-dialog--tiny .el-dialog__body .el-form-item__content {
+  width: 280px;
+  display: inline-block;
+}
+.download .el-dialog--tiny .el-dialog__body .el-form-item__content > i {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  right: -15px;
+  top: 4px;
+}
+.download .el-dialog--tiny .el-dialog__body .el-form-item__label {
+  width: 72px;
+  padding: 11px 0 11px 0;
+  text-align: left;
+}
+.download .el-dialog--tiny .el-dialog__body .el-select {
+  display: block;
+}
+
+.multiSelect {
+  height: 30px;
+  width: 200px;
+  line-height: normal;
+  position: relative;
+  display: inline-block;
+}
+.multiSelect .infor {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: white;
+  box-sizing: border-box;
+  border: 1px solid #bfcbd9;
+  border-radius: 4px;
+  color: #1f2d3d;
+  padding: 7px 30px 6px 10px;
+  transition: all 0.3s;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 16px;
+  white-space: nowrap;
+}
+.multiSelect .infor:hover {
+  border: 1px solid #8391a5;
+}
+.multiSelect .infor span {
+  margin-right: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.multiSelect .infor span:after {
+  content: '\D7';
+  transition: all 0.3s;
+  opacity: 0;
+  padding-left: 2px;
+  font-size: 14px;
+}
+.multiSelect .infor span:hover {
+  color: #093B88;
+}
+.multiSelect .infor span:hover:after {
+  opacity: 1;
+}
+.multiSelect .infor a {
+  font-size: 14px;
+  cursor: default;
+  color: gray;
+  display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.multiSelect .infor i {
+  position: absolute;
+  right: 9px;
+  top: 8px;
+  color: #979797;
+  font-size: 12px;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: all 0.3s;
+}
+.multiSelect .infor i:hover {
+  color: #093B88;
+}
+.multiSelect .selItem {
+  position: absolute;
+  top: 42px;
+  border-radius: 2px;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  z-index: 1;
+  max-height: 257px;
+  overflow-y: auto;
+}
+.multiSelect .selItem ul {
+  height: 100%;
+  width: 100%;
+  padding: 6px 0;
+  overflow-y: auto;
+}
+.multiSelect .selItem ul li {
+  height: 36px;
+  font-size: 14px;
+  color: #595959;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+.multiSelect .selItem ul li.disable {
+  pointer-events: none;
+  color: gray;
+}
+.multiSelect .selItem ul li.disable:hover {
+  background-color: white;
+}
+.multiSelect .selItem ul li span {
+  display: inline-block;
+  width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.multiSelect .selItem ul li i {
+  float: right;
+  display: none;
+}
+.multiSelect .selItem ul li.sel {
+  color: #20a0ff;
+}
+.multiSelect .selItem ul li.sel i {
+  display: block;
+}
+.multiSelect .selItem ul li:hover {
+  background-color: #e4e8f1;
+}
+.multiSelect .selItem ul .noData {
+  text-align: center;
+  color: gray;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.multiSelect .selItem::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.multiSelect .selItem::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(151, 168, 190, 0.3);
+}
+.multiSelect .selItem::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+

@@ -1,0 +1,94 @@
+.outboxSettingWrap .agreement {
+  height: 100px;
+  padding: 30px;
+  width: calc(100% - 32px);
+  background-color: #fff;
+  line-height: 40px;
+  margin: 16px 16px 4px;
+}
+.outboxSettingWrap .agreement p span:first-child {
+  display: inline-block;
+  width: 120px;
+}
+.outboxSettingWrap .outboxSetting > div:first-child {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 24px;
+  overflow-y: auto;
+}
+.outboxSettingWrap .outboxSetting > div:first-child input[type='number']::-webkit-outer-spin-button,
+.outboxSettingWrap .outboxSetting > div:first-child input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+.outboxSettingWrap .outboxSetting > div:first-child input[type='number'] {
+  -moz-appearance: textfield;
+}
+.outboxSettingWrap .outboxSetting .outboxForm {
+  width: 500px;
+}
+.outboxSettingWrap .outboxSetting .outboxForm .el-form-item__label {
+  color: #48576a;
+  font-size: 14px;
+}
+.outboxSettingWrap .outboxSetting .outboxForm .el-form-item__content > span {
+  color: #8c8c8c;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.outboxSettingWrap .outboxSetting .outboxForm .is-required label::before {
+  content: unset !important;
+}
+.outboxSettingWrap .outboxSetting .outboxForm .is-required .el-form-item__content .el-input:not(.is-disabled)::after {
+  position: absolute;
+  content: '*';
+  color: #ff4949;
+  right: -22px;
+  top: 4px;
+  font-size: 22px;
+}
+.outboxSettingWrap .outboxSetting .outboxForm .is-disabled input {
+  background-color: #fff;
+  border: unset;
+  font-size: 14px;
+  color: #8c8c8c;
+  cursor: auto;
+  cursor: initial;
+}
+.outboxSettingWrap .outboxSetting .btn {
+  margin-top: 50px;
+  box-sizing: border-box;
+  padding-left: 120px;
+}
+.outboxSettingWrap .outboxSetting .el-dialog--tiny {
+  width: 420px;
+}
+.outboxSettingWrap .outboxSetting .el-dialog--tiny .el-dialog__body {
+  padding-bottom: 0;
+}
+.outboxSettingWrap .outboxSetting .el-dialog--tiny .el-dialog__body .el-form-item__content {
+  width: 280px;
+  display: inline-block;
+}
+.outboxSettingWrap .outboxSetting .el-dialog--tiny .el-dialog__body .el-form-item__content .el-select .el-select-dropdown {
+  left: 0 !important;
+}
+.outboxSettingWrap .outboxSetting .el-dialog--tiny .el-dialog__body .el-form-item__content .multiSelect {
+  width: 280px;
+}
+.outboxSettingWrap .outboxSetting .el-dialog--tiny .el-dialog__body .el-form-item__content > i {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  right: -15px;
+  top: 4px;
+}
+.outboxSettingWrap .outboxSetting .el-dialog--tiny .el-dialog__body .el-form-item__label {
+  width: 72px;
+  padding: 11px 0 11px 0;
+  text-align: left;
+}
+.outboxSettingWrap .outboxSetting .el-dialog--tiny .el-dialog__body .el-select {
+  display: block;
+}
+

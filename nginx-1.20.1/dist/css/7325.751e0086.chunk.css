@@ -1,0 +1,230 @@
+.yt_dbreset_wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.yt_dbreset_wrap #reset_panel_left {
+  flex: 1;
+  min-width: 635px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+.yt_dbreset_wrap #reset_panel_left .yt_logo-cem {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+.yt_dbreset_wrap #reset_panel_left .yt_logo-cem img {
+  max-width: 120px;
+  max-height: 70px;
+  cursor: pointer;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container {
+  width: 420px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  box-shadow: 0 4px 14px 0 rgba(206, 207, 209, 0.28);
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap {
+  margin: 43px 30px 54px;
+  text-align: center;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .reset_title {
+  font-size: 22px;
+  color: #000;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .reset_title .title_tips {
+  font-size: 14px;
+  line-height: 24px;
+  color: #8c8c8c;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .reset_title .title_tips a {
+  color: #0847a6;
+  cursor: pointer;
+  font-weight: 600;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-pwd {
+  position: relative;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-pwd .icon-cem_log-off {
+  position: absolute;
+  right: 113px;
+  margin-top: 16px;
+  color: #bfbfbf;
+  cursor: pointer;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-pwd #pw-btn {
+  position: absolute;
+  right: 87px;
+  margin-top: 15px;
+  width: 18px;
+  height: 18px;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap {
+  margin-top: 36px;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap input {
+  width: 360px;
+  background: #fff;
+  outline: none;
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  color: #262626;
+  font-size: 14px;
+  box-shadow: inset 0 0 0 1000px #fff;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap input:hover {
+  border-color: #0847a6;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap input::-webkit-autofill {
+  box-shadow: 0 0 0 1000px #f7f8fa inset;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap input.input-email-error {
+  border: 1px solid #e55460;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap input[disabled] {
+  cursor: not-allowed;
+  background-color: #f7f8fa;
+  color: #bfbfbf;
+  border: 1px solid #dedede;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap .input-pwd-error {
+  border: 1px solid #d96969;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap .tip_text {
+  height: 17px;
+  color: #d96969;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 70px;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap .input-pwd-rules {
+  width: 142px;
+  height: 173px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 4px;
+  border: 1px solid #e9e9e9;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 13px 16px;
+  position: absolute;
+  left: 546px;
+  top: 0;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap .input-pwd-rules .rule-header {
+  color: #8c8c8c;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap .input-pwd-rules .rule-content li {
+  margin-top: 12px;
+  text-align: left;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap .input-pwd-rules .rule-content li span:first-of-type {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 2px;
+  border: 1px solid #bfbfbf;
+  position: relative;
+  top: 1px;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap .input-pwd-rules .rule-content li span:first-of-type i {
+  font-size: 12px;
+  color: #fff;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap .input-pwd-rules .rule-content li span.rule-name {
+  color: #262626;
+  margin-left: 3px;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap .input-pwd-rules .rule-content li.active span:first-of-type {
+  background-color: #0847a6;
+  border: none;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap .input-pwd-rules .rule-content li.active span:first-of-type i {
+  position: absolute;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .input-wrap .input-pwd-rules .rule-content li.active span.rule-name {
+  color: #0747a6;
+  font-weight: 500;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .error {
+  font-size: 12px;
+  color: #d96969;
+  text-align: left;
+  margin-left: 70px;
+  width: 360px;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .set-btn {
+  width: 360px;
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  height: 48px;
+  color: #bfbfbf;
+  font-size: 16px;
+  font-weight: 500;
+  background: #f7f8fa;
+  margin-top: 48px;
+  text-align: center;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .set-pwd-wrap .set-btn-hover {
+  background: #61799b;
+  color: #fff;
+  border: none;
+}
+.yt_dbreset_wrap #reset_panel_left .reset_panel_container .browser_tips {
+  font-size: 12px;
+  color: #262626;
+  text-align: center;
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
+}
+.yt_dbreset_wrap #reset_panel_left .rights {
+  font-size: 12px;
+  color: #8c8c8c;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 16px;
+  position: absolute;
+}
+.yt_dbreset_wrap #reset_img_right {
+  background: #ddd;
+  width: 518px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.yt_dbreset_wrap #reset_img_right h2 {
+  font-size: 24px;
+  line-height: 42px;
+  margin: 0 auto;
+  width: 427px;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+}
+

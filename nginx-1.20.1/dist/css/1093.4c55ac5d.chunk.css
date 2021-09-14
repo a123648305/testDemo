@@ -1,0 +1,69 @@
+.yt_search_input_wrapper {
+  display: inline-block;
+  position: relative;
+  margin-right: 12px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  padding-left: 12px;
+}
+.yt_search_input_wrapper:hover {
+  border-color: #0847a6;
+}
+.yt_search_input_wrapper > input {
+  width: 66%;
+  height: 100%;
+  border: none;
+}
+.yt_search_input_wrapper > input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+.yt_search_input_wrapper i {
+  cursor: pointer;
+  color: #bfbfbf;
+  position: absolute;
+  right: 9px;
+  top: 9px;
+}
+.yt_search_input_wrapper i:hover {
+  color: #0847a6;
+}
+.yt_search_input_wrapper i.icon-cem_log-off {
+  right: 31px;
+}
+.yt_search_input_wrapper i.icon-cem_log-off:hover {
+  color: #8c8c8c;
+}
+
+.push_log_list_wrapper {
+  position: relative;
+  background-color: #fff;
+  min-height: 170px;
+}
+.push_log_list_wrapper .cem-table-wrap {
+  padding: 16px 0 20px 0;
+}
+.push_log_list_wrapper .cem-table-wrap .el-table td {
+  vertical-align: top;
+}
+.push_log_list_wrapper .cem-table-wrap .el-table .price_warn {
+  word-break: break-all;
+  width: 100%;
+  height: 48px;
+  text-overflow: ellipsis;
+}
+
+.yt_price_push_log_wrapper {
+  height: 100%;
+}
+.yt_price_push_log_wrapper #price_push_log_content {
+  height: calc(100% - 78px);
+  padding: 12px;
+  background-color: #f2f3f5;
+  overflow: scroll;
+}
+.yt_price_push_log_wrapper #price_push_log_content .push_log_list_wrapper .error-block,
+.yt_price_push_log_wrapper #price_push_log_content .push_log_list_wrapper .empty-block {
+  min-height: 170px;
+}
+

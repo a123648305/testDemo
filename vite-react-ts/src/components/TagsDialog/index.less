@@ -1,0 +1,120 @@
+.tag_dialog {
+  .ant-modal-header {
+    border: none;
+    padding-top: 24px;
+    padding-bottom: 0;
+    .ant-modal-title {
+      width: 64px;
+      height: 24px;
+      font-size: 16px;
+      font-family: PingFangSC, PingFangSC-Semibold;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      line-height: 24px;
+    }
+  }
+  .ant-modal-body {
+    padding-bottom: 16px;
+  }
+  .ant-modal-footer {
+    border-top: none;
+    padding: 0 24px 16px 0;
+  }
+  .ant-modal-close-x {
+    margin-top: 8px;
+  }
+  .ant-select-selection-overflow-item {
+    margin-right: 8px;
+  }
+  .ant-select-selection-item {
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+  }
+  .tag_box {
+    border: 1px solid #e5e5e5;
+    width: 512px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    border-radius: 2px;
+    position: relative;
+    .tag_box_containter {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 2px 0;
+    }
+    input {
+      outline: none;
+      border: none;
+      //   height: 32px;
+      //   max-width: 100%;
+      flex: 1;
+      &::-webkit-input-placeholder {
+        height: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #8c8c8c;
+        line-height: 20px;
+      }
+    }
+  }
+  .tag_box_fcous {
+    border: 1px solid #7262fd;
+  }
+  .tag_ul {
+    margin-top: 12px;
+    // border: 1px solid red;
+    padding-left: 0;
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .tag_ul_li {
+      min-width: 52px;
+      height: 28px;
+      border: 1px solid #e5e5e5;
+      border-radius: 2px;
+      font-family: PingFangSC, PingFangSC-Regular;
+      font-weight: 400;
+      color: #262626;
+      line-height: 28px;
+      float: left;
+      margin: 2px 0;
+      margin-right: 12px;
+      text-align: center;
+      cursor: pointer;
+      list-style: none;
+      padding: 0 12px;
+    }
+    .tag_ul_li_active {
+      color: white;
+    }
+    .tag_checked {
+      padding-right: 6px;
+    }
+  }
+  .tag_footer_text {
+    float: left;
+    padding-left: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+  }
+
+  .recently_box {
+    margin-top: 16px;
+    .recently_title {
+      font-size: 14px;
+      font-weight: 400;
+      color: #8c8c8c;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+  }
+}

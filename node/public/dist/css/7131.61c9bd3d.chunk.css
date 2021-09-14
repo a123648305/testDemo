@@ -1,0 +1,36 @@
+.useless-msg-wrapper .breadcumb-wrapper {
+  margin-bottom: 0;
+}
+.useless-msg-wrapper .useless-msg-body {
+  padding: 12px;
+  background-color: #f2f3f5;
+}
+.useless-msg-wrapper .useless-msg-body .useless-msg-search {
+  padding: 16px 24px 12px;
+  background-color: #fff;
+}
+.useless-msg-wrapper .useless-msg-body .useless-msg-search .search-input-wrapper {
+  display: inline-block;
+  position: relative;
+  margin-right: 12px;
+}
+.useless-msg-wrapper .useless-msg-body .useless-msg-search .search-input-wrapper .el-input__inner {
+  width: 150px;
+  border-radius: 4px;
+}
+.useless-msg-wrapper .useless-msg-body .useless-msg-search .search-input-wrapper .el-input__icon {
+  cursor: pointer;
+}
+.useless-msg-wrapper .useless-msg-body .cem-table-wrap {
+  width: 100%;
+  padding: 0 24px 20px 24px;
+  background-color: #fff;
+}
+.useless-msg-wrapper .useless-msg-body .cem-table-wrap .operation {
+  color: #0847a6;
+  cursor: pointer;
+}
+.useless-msg-wrapper .useless-msg-body .cem-table-wrap .operation:hover {
+  color: #093B88;
+}
+

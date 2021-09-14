@@ -1,0 +1,32 @@
+.research_answer .questions_list {
+  width: 100%;
+  position: relative;
+}
+.research_answer .questions_list > div {
+  margin: 16px 0;
+}
+
+.research_answer {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.research_answer.pc_wrap {
+  background-color: #f2f3f5;
+}
+.research_answer .pc_show {
+  width: 375px;
+  margin: 50px auto 0;
+  background-color: #fff;
+  height: calc(100% - 80px);
+  overflow: auto;
+}
+.research_answer .answer_wrap {
+  display: flex;
+  height: calc(100vh - 78px - 46px);
+  position: relative;
+}
+.research_answer .answer_wrap ::-webkit-scrollbar {
+  width: 2px;
+}
+

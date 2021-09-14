@@ -1,0 +1,62 @@
+.bing-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  background: #F6F6F6;
+}
+.bing-wrap canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+.bing-wrap .panel-title {
+  text-align: left;
+  font-size: 16px;
+  color: #262626;
+  line-height: 22px;
+  font-weight: bold;
+  padding: 20px;
+}
+.bing-wrap .panel-content {
+  position: relative;
+  left: 50%;
+  margin-left: -200px;
+  top: 50%;
+  margin-top: -200px;
+  width: 400px;
+  height: 400px;
+  background: white;
+}
+.bing-wrap .panel-content .panel-content-foot {
+  font-size: 16px;
+  color: #262626;
+  line-height: 22px;
+  padding: 16px;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+.bing-wrap .panel-footer {
+  width: 100%;
+  color: #bfbfbf;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 60px;
+  position: relative;
+  top: 46%;
+}
+.bing-wrap .panel-footer span {
+  vertical-align: middle;
+}
+.bing-wrap .panel-footer img {
+  max-width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+}
+

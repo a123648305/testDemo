@@ -1,0 +1,56 @@
+.topicValue {
+  padding: 12px;
+  background-color: #f2f3f5;
+}
+.topicValue > div {
+  background: #fff;
+}
+.topicValue .cem-table-wrap {
+  width: 100%;
+  padding: 24px 20px;
+  background-color: #fff;
+}
+.topicValue .el-table .highlight-row {
+  background-color: #eef1f6;
+}
+.topicValue .el-table .operation_columns:hover {
+  color: #0747a6;
+}
+.topicValue .el-table .operation_columns[disabled]:hover {
+  color: #bfcbd9;
+}
+.topicValue .el-dialog__body .dialog-title {
+  position: absolute;
+  top: 20px;
+  line-height: 1 !important;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2d3d;
+}
+.topicValue .el-dialog__body .dialog-title i {
+  font-size: 20px;
+  margin-right: 8px;
+}
+.topicValue .el-dialog__body .delete-tips {
+  line-height: 28px;
+}
+.topicValue .el-dialog__body .form-item {
+  display: flex;
+}
+.topicValue .el-dialog__body .form-item:first-of-type {
+  margin-bottom: 16px;
+}
+.topicValue .el-dialog__body .form-item label {
+  min-width: 88px;
+  line-height: 36px;
+  height: 36px;
+}
+.topicValue .el-dialog__body .form-item span {
+  line-height: 36px;
+}
+.topicValue .el-dialog__body .form-item input {
+  height: 36px;
+}
+

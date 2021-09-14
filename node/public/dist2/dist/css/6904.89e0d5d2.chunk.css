@@ -1,0 +1,30 @@
+
+.yt_social_analysis_tag_top_wrapper {
+  height: 100%;
+}
+.yt_social_analysis_tag_top_wrapper .content {
+  padding: 12px;
+  height: calc(100% - 48px);
+  overflow: auto;
+  position: relative;
+  background-color: #f2f3f5;
+  z-index: 1;
+}
+.yt_social_analysis_tag_top_wrapper .content .content_view {
+  background-color: white;
+  height: 100%;
+}
+.yt_social_analysis_tag_top_wrapper .content .content_view .chart_view {
+  display: flex;
+  background-color: white;
+  height: 100%;
+}
+.yt_social_analysis_tag_top_wrapper .content .content_view .chart_view > .chart {
+  margin-top: 50px;
+  box-sizing: border-box;
+  width: 33.33%;
+}
+.yt_social_analysis_tag_top_wrapper .content .content_view .chart_view > .chart:not(:first-child) {
+  border-left: 1px dashed #e5e5e5;
+}
+

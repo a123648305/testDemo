@@ -1,0 +1,28 @@
+.white-list-wrap .filter {
+  background: #fff;
+  width: 100%;
+  padding: 0 24px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.white-list-wrap .filter .el-button {
+  float: right;
+}
+.white-list-wrap .filter .switch-bar {
+  display: inline-block;
+}
+.white-list-wrap .filter .switch-bar .wt-switch input:checked + .wt-switch-text {
+  background: #20a0ff;
+}
+.white-list-wrap .white-list p {
+  color: #8c8c8c;
+  margin: 10px 45px;
+}
+.white-list-wrap .white-list p span {
+  color: #262626;
+  font-size: 14px;
+}
+.common-wrapper .common-padding-12 .white-list .cem-table-wrap {
+  padding-top: 0;
+}
+

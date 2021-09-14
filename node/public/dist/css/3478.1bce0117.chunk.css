@@ -1,0 +1,630 @@
+.yt_service_overview_wrapper {
+  width: 100%;
+  height: calc(100%);
+  overflow: auto;
+}
+.yt_service_overview_wrapper .svg-button-wrapper {
+  cursor: unset !important;
+}
+.yt_service_overview_wrapper .yt_idb_header_Filter_view {
+  height: auto !important;
+}
+.yt_service_overview_wrapper .yt_idb_header_Filter_view .contentWrap {
+  overflow-y: unset;
+}
+.yt_service_overview_wrapper .yt_idb_header_Filter_view .content {
+  padding: 16px 0 24px;
+}
+.yt_service_overview_wrapper .yt_idb_header_Filter_view .content > div {
+  background-color: #fff;
+  margin-top: 16px;
+}
+.yt_service_overview_wrapper .yt_idb_header_Filter_view .content > div:nth-child(1) {
+  margin-top: 0;
+}
+.yt_service_overview_wrapper .goodsStyle:hover {
+  color: #7262fd;
+  cursor: pointer;
+}
+
+.yt_service_insight_concern_table_chart_wrap {
+  box-sizing: 'border-box';
+  padding-top: 60px;
+  height: 100%;
+}
+.yt_service_insight_concern_table_chart_wrap .ant-pro-table {
+  padding: 16px 16px 0 16px;
+}
+.yt_service_insight_concern_table_chart_wrap .ant-pro-table .ant-card-body {
+  height: 100%;
+}
+.yt_service_insight_concern_table_chart_wrap .ant-pro-table .ant-table-pagination.ant-pagination {
+  margin: 16px 16px 0 0;
+}
+.yt_service_insight_concern_table_chart_wrap .ant-pro-table .ant-table.ant-table-middle .ant-table-title,
+.yt_service_insight_concern_table_chart_wrap .ant-pro-table .ant-table.ant-table-middle .ant-table-footer,
+.yt_service_insight_concern_table_chart_wrap .ant-pro-table .ant-table.ant-table-middle .ant-table-thead > tr > th,
+.yt_service_insight_concern_table_chart_wrap .ant-pro-table .ant-table.ant-table-middle .ant-table-tbody > tr > td,
+.yt_service_insight_concern_table_chart_wrap .ant-pro-table .ant-table.ant-table-middle tfoot > tr > th,
+.yt_service_insight_concern_table_chart_wrap .ant-pro-table .ant-table.ant-table-middle tfoot > tr > td {
+  padding: 15px 8px;
+}
+.yt_service_insight_concern_table_chart_wrap .ant-pro-table .ant-pagination {
+  transform: translateY(4px);
+}
+.yt_service_insight_concern_table_chart_wrap .ant-pro-table,
+.yt_service_insight_concern_table_chart_wrap .ant-card-body,
+.yt_service_insight_concern_table_chart_wrap .ant-table-wrapper,
+.yt_service_insight_concern_table_chart_wrap .ant-spin-nested-loading,
+.yt_service_insight_concern_table_chart_wrap .ant-spin-container {
+  height: 100%;
+}
+.yt_service_insight_concern_table_chart_wrap .ant-table-wrapper .ant-pagination {
+  position: absolute;
+  width: 100%;
+  bottom: 8px;
+}
+
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper {
+  height: 460px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .yt_section_component_wrapper {
+  height: 100%;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .yt_chart_title_wrapper {
+  padding: 0 24px 0 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .chart_title_buttons > i {
+  font-size: 14px;
+  margin-left: 20px;
+  color: #8c8c8c;
+  cursor: pointer;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .chart_title_buttons > i:first-of-type {
+  margin-left: 0;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .chart_title_buttons > i.active {
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .chart_title_buttons > i:hover {
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .ant-radio-group {
+  margin-right: 16px;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper::after {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-trigger {
+  padding: unset;
+  background: unset;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-trigger > i {
+  font-weight: 400;
+  color: #bfbfbf;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-trigger > i.word_icon_hover {
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-trigger:hover {
+  background: unset;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-trigger:hover > i {
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-trigger.sel {
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-trigger.sel > i {
+  transform: rotate(0deg) !important;
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-panel {
+  font-weight: 500;
+  font-size: 12px;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-panel .panel-item {
+  width: 150px;
+  color: #8c8c8c;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-panel .panel-item span {
+  color: #262626;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-panel .panel-item .panel-item-icon {
+  margin-right: 12px;
+  font-size: 14px;
+  color: #8c8c8c;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-panel .panel-item.sel {
+  background-color: unset;
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-panel .panel-item.sel span {
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-panel .panel-item.sel .panel-item-icon {
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-panel .panel-item.sel .choice {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 12px;
+  height: 8px;
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single-select-button-wrapper .button_content .button-panel .panel-item:hover {
+  background-color: #fafafa;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .single_select_diviver_right::after {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .set_Top_active .button_content .button-trigger .button-title {
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect::after {
+  content: '';
+  display: inline-block;
+  margin-left: 6px;
+  margin-right: 14px;
+  height: 12px;
+  width: 1px;
+  margin-top: 4px;
+  background: #e5e5e5;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .sel {
+  background-color: #7262fd !important;
+  border-color: #7262fd !important;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-panel {
+  width: 220px;
+  height: 190px;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-header {
+  display: none;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-panel-body {
+  height: 146px;
+  margin-bottom: 0;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper.whiteBg > span {
+  font-weight: 400;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper.whiteBg.sel > span.currValue {
+  color: #fff;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper.whiteBg > span:nth-child(2) {
+  color: #262626;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper {
+  padding: 3px 8px !important;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper .multi-select-panel .el-checkbox__inner:hover {
+  border-color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper .multi-select-panel .multi-select-header .el-input__inner:hover {
+  border-color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper .multi-select-panel .multi-select-header .el-input__inner:focus {
+  border-color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper .multi-select-panel .multi-select-panel-body > li:hover label {
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper .multi-select-panel .multi-select-panel-body .el-checkbox__inner {
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper .multi-select-panel .multi-select-panel-body .el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: #7262fd;
+  border-color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper .multi-select-panel .multi-select-panel-body .all_check .all_select .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  border-color: #7262fd;
+  background-color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper .multi-select-panel .multi-select-panel-footer .el-button--primary {
+  color: white;
+  border-color: #7262fd;
+  background-color: #7262fd;
+  border-radius: 2px;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .SessionLocationMultiSelect .multi-select-wrapper .multi-select-panel .multi-select-panel-footer .el-button--default {
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #626262;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .disableClass {
+  pointer-events: none;
+  cursor: unset;
+  color: #7262fd;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .chart-table {
+  padding-top: 60px;
+  height: 100%;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .chart-table .ant-pro-table,
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .chart-table .ant-card-body,
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .chart-table .ant-table-wrapper,
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .chart-table .ant-spin-nested-loading,
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .chart-table .ant-spin-container {
+  height: 100%;
+}
+.yt_serviceInsight_overviewCommodityAnalyzeLineTabelChart_wrapper .chart-table .ant-table-wrapper .ant-pagination {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.yt_service_overview_session_chart {
+  width: 100%;
+  height: 400px;
+}
+.yt_service_overview_session_chart .yt_chart_title_wrapper {
+  border-bottom: solid 1px #e5e5e5;
+  padding: 14px 20px;
+  height: 50px;
+}
+.yt_service_overview_session_chart .chart_title_buttons .icons {
+  display: flex;
+  align-items: center;
+}
+.yt_service_overview_session_chart .chart_title_buttons .icons .icon {
+  cursor: pointer;
+  color: #8c8c8c;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.yt_service_overview_session_chart .chart_title_buttons .icons .icon.active,
+.yt_service_overview_session_chart .chart_title_buttons .icons .icon:hover {
+  color: #7262fd;
+}
+.yt_service_overview_session_chart .chart_title_buttons .icons .icon:first-child {
+  margin-left: unset;
+}
+.yt_service_overview_session_chart .chart_title_buttons .icons .icon.disable {
+  cursor: unset;
+  pointer-events: none;
+  color: #bfbfbf;
+}
+.yt_service_overview_session_chart .chart_title_buttons .icons .icon i.active {
+  color: #7262fd;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper::after {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-trigger {
+  padding: unset;
+  background: unset;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-trigger > i {
+  font-weight: 400;
+  color: #bfbfbf;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-trigger > i.word_icon_hover {
+  color: #7262fd;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-trigger:hover {
+  background: unset;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-trigger:hover > i {
+  color: #7262fd;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-trigger.sel {
+  color: #7262fd;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-trigger.sel > i {
+  transform: rotate(0deg) !important;
+  color: #7262fd;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-panel {
+  font-weight: 500;
+  font-size: 12px;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-panel .panel-item {
+  width: 150px;
+  color: #8c8c8c;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-panel .panel-item span {
+  color: #262626;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-panel .panel-item .panel-item-icon {
+  margin-right: 12px;
+  font-size: 14px;
+  color: #8c8c8c;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel {
+  background-color: unset;
+  color: #7262fd;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel span {
+  color: #7262fd;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel .panel-item-icon {
+  color: #7262fd;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel .choice {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 12px;
+  height: 8px;
+  color: #7262fd;
+}
+.yt_service_overview_session_chart .single-select-button-wrapper .button_content .button-panel .panel-item:hover {
+  background-color: #fafafa;
+}
+.yt_service_overview_session_chart .chart-table {
+  padding-top: 60px;
+  height: 100%;
+}
+.yt_service_overview_session_chart .chart-table .ant-pro-table,
+.yt_service_overview_session_chart .chart-table .ant-card-body,
+.yt_service_overview_session_chart .chart-table .ant-table-wrapper,
+.yt_service_overview_session_chart .chart-table .ant-spin-nested-loading,
+.yt_service_overview_session_chart .chart-table .ant-spin-container {
+  height: 100%;
+}
+.yt_service_overview_session_chart .chart-table .ant-table-wrapper .ant-pagination {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.yt_service_overview_platform_chart {
+  width: 100%;
+  height: 400px;
+}
+.yt_service_overview_platform_chart .yt_chart_title_wrapper {
+  border-bottom: solid 1px #e5e5e5;
+  padding: 14px 20px;
+  height: 50px;
+}
+.yt_service_overview_platform_chart .chart_title_buttons .icons {
+  display: flex;
+  align-items: center;
+}
+.yt_service_overview_platform_chart .chart_title_buttons .icons .icon {
+  cursor: pointer;
+  color: #8c8c8c;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.yt_service_overview_platform_chart .chart_title_buttons .icons .icon.active,
+.yt_service_overview_platform_chart .chart_title_buttons .icons .icon:hover {
+  color: #7262fd;
+}
+.yt_service_overview_platform_chart .chart_title_buttons .icons .icon:first-child {
+  margin-left: unset;
+}
+.yt_service_overview_platform_chart .chart_title_buttons .icons .icon.disable {
+  cursor: unset;
+  pointer-events: none;
+  color: #bfbfbf;
+}
+.yt_service_overview_platform_chart .chart_title_buttons .icons .icon i.active {
+  color: #7262fd;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper::after {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-trigger {
+  padding: unset;
+  background: unset;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-trigger > i {
+  font-weight: 400;
+  color: #bfbfbf;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-trigger > i.word_icon_hover {
+  color: #7262fd;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-trigger:hover {
+  background: unset;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-trigger:hover > i {
+  color: #7262fd;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-trigger.sel {
+  color: #7262fd;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-trigger.sel > i {
+  transform: rotate(0deg) !important;
+  color: #7262fd;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-panel {
+  font-weight: 500;
+  font-size: 12px;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-panel .panel-item {
+  width: 150px;
+  color: #8c8c8c;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-panel .panel-item span {
+  color: #262626;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-panel .panel-item .panel-item-icon {
+  margin-right: 12px;
+  font-size: 14px;
+  color: #8c8c8c;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel {
+  background-color: unset;
+  color: #7262fd;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel span {
+  color: #7262fd;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel .panel-item-icon {
+  color: #7262fd;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel .choice {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 12px;
+  height: 8px;
+  color: #7262fd;
+}
+.yt_service_overview_platform_chart .single-select-button-wrapper .button_content .button-panel .panel-item:hover {
+  background-color: #fafafa;
+}
+.yt_service_overview_platform_chart .chart-table {
+  padding-top: 60px;
+  height: 100%;
+}
+.yt_service_overview_platform_chart .chart-table .ant-pro-table,
+.yt_service_overview_platform_chart .chart-table .ant-card-body,
+.yt_service_overview_platform_chart .chart-table .ant-table-wrapper,
+.yt_service_overview_platform_chart .chart-table .ant-spin-nested-loading,
+.yt_service_overview_platform_chart .chart-table .ant-spin-container {
+  height: 100%;
+}
+.yt_service_overview_platform_chart .chart-table .ant-table-wrapper .ant-pagination {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.yt_service_overview_shop_chart {
+  width: 100%;
+  height: 445px;
+}
+.yt_service_overview_shop_chart .yt_chart_title_wrapper {
+  border-bottom: solid 1px #e5e5e5;
+  padding: 14px 20px;
+  height: 50px;
+}
+.yt_service_overview_shop_chart .chart_title_buttons .icons {
+  display: flex;
+  align-items: center;
+}
+.yt_service_overview_shop_chart .chart_title_buttons .icons .icon {
+  cursor: pointer;
+  color: #8c8c8c;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.yt_service_overview_shop_chart .chart_title_buttons .icons .icon.active,
+.yt_service_overview_shop_chart .chart_title_buttons .icons .icon:hover {
+  color: #7262fd;
+}
+.yt_service_overview_shop_chart .chart_title_buttons .icons .icon:first-child {
+  margin-left: unset;
+}
+.yt_service_overview_shop_chart .chart_title_buttons .icons .icon.disable {
+  cursor: unset;
+  pointer-events: none;
+  color: #bfbfbf;
+}
+.yt_service_overview_shop_chart .chart_title_buttons .icons .icon i.active {
+  color: #7262fd;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper::after {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-trigger {
+  padding: unset;
+  background: unset;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-trigger > i {
+  font-weight: 400;
+  color: #bfbfbf;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-trigger > i.word_icon_hover {
+  color: #7262fd;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-trigger:hover {
+  background: unset;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-trigger:hover > i {
+  color: #7262fd;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-trigger.sel {
+  color: #7262fd;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-trigger.sel > i {
+  transform: rotate(0deg) !important;
+  color: #7262fd;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-panel {
+  font-weight: 500;
+  font-size: 12px;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-panel .panel-item {
+  width: 150px;
+  color: #8c8c8c;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-panel .panel-item span {
+  color: #262626;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-panel .panel-item .panel-item-icon {
+  margin-right: 12px;
+  font-size: 14px;
+  color: #8c8c8c;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel {
+  background-color: unset;
+  color: #7262fd;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel span {
+  color: #7262fd;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel .panel-item-icon {
+  color: #7262fd;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-panel .panel-item.sel .choice {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 12px;
+  height: 8px;
+  color: #7262fd;
+}
+.yt_service_overview_shop_chart .single-select-button-wrapper .button_content .button-panel .panel-item:hover {
+  background-color: #fafafa;
+}
+.yt_service_overview_shop_chart .chart-table {
+  padding-top: 60px;
+  height: 100%;
+}
+.yt_service_overview_shop_chart .chart-table .ant-pro-table,
+.yt_service_overview_shop_chart .chart-table .ant-card-body,
+.yt_service_overview_shop_chart .chart-table .ant-table-wrapper,
+.yt_service_overview_shop_chart .chart-table .ant-spin-nested-loading,
+.yt_service_overview_shop_chart .chart-table .ant-spin-container {
+  height: 100%;
+}
+.yt_service_overview_shop_chart .chart-table .ant-table-wrapper .ant-pagination {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.yt_service_overview_shop_chart .ant-table .ant-table-header .ant-table-thead tr:first-child th {
+  border-bottom: 1px solid #E5E5E5;
+}
+.yt_service_overview_shop_chart .ant-table .ant-table-header .ant-table-thead tr:first-child th:first-child {
+  border-right: unset;
+}
+.yt_service_overview_shop_chart .ant-table .ant-table-header .ant-table-thead tr th:not(:last-child) {
+  border-right: 1px solid #E5E5E5;
+}
+

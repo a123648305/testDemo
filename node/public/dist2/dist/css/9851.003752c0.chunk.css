@@ -1,0 +1,72 @@
+.update_thresholdValue {
+  padding: 2.5rem;
+  -webkit-text-size-adjust: none;
+  color: #2C2C2C;
+  font-size: 1rem !important;
+}
+.update_thresholdValue .pageTitle {
+  font-size: 2rem;
+  color: #262626;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 2.33rem;
+}
+.update_thresholdValue .title {
+  color: #828282;
+  margin-bottom: 1.33rem;
+}
+.update_thresholdValue .table-title {
+  text-align: center;
+  margin: 1.667rem auto 1rem auto;
+}
+.update_thresholdValue .el-select .el-input,
+.update_thresholdValue .el-input__inner {
+  height: 2.33rem;
+  width: 18.3rem;
+  font-size: 0.833rem;
+  background: #F8F8F8;
+}
+.update_thresholdValue .tabs {
+  margin-bottom: 2.08rem;
+}
+.update_thresholdValue .tabs .item {
+  display: inline-block;
+  padding: 0.5rem 1.75rem;
+  background-color: #F2F2F2;
+  text-align: center;
+  font-size: 1.17rem;
+  color: #8C8C8C;
+  margin-right: 0.08rem;
+  border-radius: 0.08rem;
+}
+.update_thresholdValue .tabs .item:first-child {
+  border-radius: 0.08rem 0 0 0.08rem;
+}
+.update_thresholdValue .tabs .item:last-child {
+  border-radius: 0 0.08rem 0.08rem 0;
+}
+.update_thresholdValue .tabs .active {
+  color: white;
+  background-color: #2684FF;
+}
+.update_thresholdValue .input {
+  width: 100%;
+  height: 3rem;
+  padding: 0 0.67rem;
+  margin-bottom: 2rem;
+  font-size: 1.17rem;
+  color: #262626;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 0.08rem;
+}
+.update_thresholdValue .top .flag {
+  font-size: 1.25rem;
+  color: #8C8C8C;
+  margin-right: 0.67rem;
+}
+.update_thresholdValue .top .value {
+  font-size: 1.75rem;
+  color: #262626;
+}
+

@@ -1,0 +1,81 @@
+.flex-col .breadcumb-wrapper {
+  margin-bottom: 0;
+}
+.flex-col .topic {
+  padding: 12px;
+  background-color: #f2f3f5;
+}
+.flex-col .topic > div {
+  background: #fff;
+}
+.flex-col .topic > div .cem-table-wrap {
+  width: 100%;
+  padding: 24px 20px;
+  background-color: #fff;
+}
+.flex-col .topic .filter {
+  padding: 4px 24px 12px;
+  position: relative;
+}
+.flex-col .topic .filter button {
+  float: right;
+}
+.flex-col .topic .filter::after {
+  content: '';
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.flex-col .topic .el-dialog__body .dialog-title {
+  position: absolute;
+  top: 20px;
+  line-height: 1 !important;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2d3d;
+}
+.flex-col .topic .el-dialog__body .dialog-title i {
+  font-size: 20px;
+  margin-right: 8px;
+}
+.flex-col .topic .el-dialog__body .delete-tips {
+  line-height: 28px;
+}
+.flex-col .topic .el-dialog__body .form-item {
+  display: flex;
+}
+.flex-col .topic .el-dialog__body .form-item:first-of-type {
+  margin-bottom: 16px;
+}
+.flex-col .topic .el-dialog__body .form-item label {
+  min-width: 88px;
+  line-height: 36px;
+  height: 36px;
+}
+.flex-col .topic .el-dialog__body .form-item span {
+  line-height: 36px;
+}
+.flex-col .topic .el-dialog__body .form-item input {
+  height: 36px;
+}
+.flex-col .topic .sortable-row {
+  cursor: move;
+}
+.flex-col .topic .sortable-row .move_icon_container {
+  text-align: right;
+}
+.flex-col .topic .sortable-row .move_icon_container .icon-cem_move {
+  position: relative;
+  top: 1px;
+  margin-right: 4px;
+  font-size: 20px;
+  color: #d8d8d8;
+  visibility: hidden;
+}
+.flex-col .topic .sortable-row:hover .icon-cem_move {
+  visibility: visible;
+}
+
