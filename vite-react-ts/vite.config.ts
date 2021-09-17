@@ -3,16 +3,41 @@
  * @Author: wujian
  * @Date: 2021-09-09 17:26:11
  * @LastEditors: wujian
- * @LastEditTime: 2021-09-13 14:48:27
+ * @LastEditTime: 2021-09-17 14:56:15
  */
 import { defineConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
+import vitePluginImport from 'vite-plugin-imp' // 自动导入 按需加载vite插件  vite-plugin-style-import
 import path from 'path'
 export default defineConfig({
   root: '',
   base: '/', // 开发或生产环境服务的公共基础路径。
   mode: 'development', // 'development'（开发模式），'production'（生产模式）
-  plugins: [reactRefresh()],
+  plugins: [
+    reactRefresh(),
+    vitePluginImport({
+      libList: [
+        {
+          libName: 'antd',
+          style: (name: any) => `antd/es/${name}/style/css.js`,
+        },
+        {
+          libName: 'element-plus',
+          style: (name: string) => {
+            return `element-plus/lib/theme-chalk/el-${name.slice(2)}.css`
+          },
+        },
+      ],
+    }),
+  ],
+  css: {
+    preprocessorOptions: {
+      less: {
+        // 支持内联 JavaScript
+        javascriptEnabled: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
