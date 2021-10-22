@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-10-21 18:57:31
  * @LastEditors: wujian
- * @LastEditTime: 2021-10-22 21:32:29
+ * @LastEditTime: 2021-10-22 21:51:51
  */
 import React, { useEffect, useState, useRef, useCallback } from 'react'
 import { Modal, Form, Select, Input, Space } from 'antd'
@@ -60,27 +60,6 @@ const AddChartDialog: React.FC<PropsType> = ({
   onSumbit,
   title,
 }) => {
-  //   useEffect(() => {
-  //     if (visible) {
-  //       Sortable.create(document.querySelector('.ant-form'), {
-  //         animation: 150,
-  //         //   handle: '.icon-liebiao',
-  //         delay: 5,
-  //         group: 'shared',
-  //         onEnd: ({ newIndex, oldIndex }) => {
-  //           console.log(newIndex, oldIndex, 'oo');
-  //           if (newIndex === oldIndex) {
-  //             return;
-  //           }
-  //           onConfigUpdate({
-  //             key: 'SORTING',
-  //             value: { newIndex, oldIndex },
-  //           });
-  //         },
-  //       });
-  //     }
-  //   }, [visible]);
-
   const [formRes] = Form.useForm()
   const [createOptions, setcCreateOptions] =
     useState<Array<{ lable: string; value: string }>>()
@@ -105,16 +84,6 @@ const AddChartDialog: React.FC<PropsType> = ({
       setShowFieldList(false)
       setShowRemake(true)
     }
-  }
-
-  const delOptions = (item: object, index: number) => {
-    console.log(item, index)
-    const newOptions = produce(createOptions, (draft) => {
-      if (draft?.length > 1) {
-        draft?.splice(index, 1)
-      }
-    })
-    setcCreateOptions(newOptions)
   }
 
   const formConfirm = async () => {
@@ -166,6 +135,25 @@ const AddChartDialog: React.FC<PropsType> = ({
       console.log(newFormData, 'data')
     }
   }, [])
+
+  useEffect(() => {
+    if (fieldList) {
+      Sortable.create(document.querySelector('.test'), {
+        animation: 150,
+        handle: '.icon-liebiao',
+        onEnd: ({ newIndex, oldIndex }) => {
+          console.log(newIndex, oldIndex, 'oo')
+          if (newIndex === oldIndex) {
+            return
+          }
+          //   onConfigUpdate({
+          //     key: 'SORTING',
+          //     value: { newIndex, oldIndex },
+          //   })
+        },
+      })
+    }
+  }, [fieldList])
 
   return (
     <Modal
@@ -244,10 +232,10 @@ const AddChartDialog: React.FC<PropsType> = ({
         {fieldList && (
           <Form.List name="schemaList">
             {(fields, { add, remove }, { errors }) => (
-              <>
+              <div className="test">
                 {fields.map((field, index) => (
                   <Form.Item
-                    tip={`${JSON.stringify(field)}  `}
+                    tip={`${JSON.stringify(field)}`}
                     label={
                       <span className="move-target">
                         <i className="iconfont icon-liebiao" />
@@ -290,7 +278,7 @@ const AddChartDialog: React.FC<PropsType> = ({
                   </span>
                   <Form.ErrorList errors={errors} />
                 </Form.Item>
-              </>
+              </div>
             )}
           </Form.List>
         )}
