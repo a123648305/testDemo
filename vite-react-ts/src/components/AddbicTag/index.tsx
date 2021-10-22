@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-10-21 18:57:31
  * @LastEditors: wujian
- * @LastEditTime: 2021-10-22 21:27:58
+ * @LastEditTime: 2021-10-22 21:32:29
  */
 import React, { useEffect, useState, useRef, useCallback } from 'react'
 import { Modal, Form, Select, Input, Space } from 'antd'
@@ -127,8 +127,9 @@ const AddChartDialog: React.FC<PropsType> = ({
       let payload = { code, name, type }
       if (['RADIO', 'CHECKBOX'].includes(type)) {
         const oldFormData = formData.value
+        const length = oldFormData.length
         const arr = schemaList.map((item: string, index: number) => ({
-          key: oldFormData[index].key || '',
+          key: index > length ? '' : oldFormData[index].key || '',
           value: item,
         }))
         console.log(arr, 'schefjofj ')
