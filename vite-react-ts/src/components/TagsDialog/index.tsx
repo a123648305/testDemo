@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-09-02 12:27:55
  * @LastEditors: wujian
- * @LastEditTime: 2021-09-13 14:17:05
+ * @LastEditTime: 2021-09-23 10:57:22
  */
 import React, { useEffect, useRef, useState } from 'react'
 import { Tag, Modal, Input, Button } from 'antd'
@@ -94,11 +94,12 @@ const TagsDialog: React.FC<PropsType> = ({
     console.log(checkItem, 'ckick')
     const { value, orginValue, id, checked } = checkItem
     let newItem: signType = { value, id, checked, orginValue }
-    if (checked) return // 点击了已选中的 return
+    if (checked) return false // 点击了已选中的 return
     newItem.value = id ? value : (orginValue as string)
     newItem.checked = true
     setSearchText('') // 重置输入框
     setsearchList([]) // 重置搜索结果
+    console.log('??')
 
     const data = checkSigns.find((item) => item.value === newItem.value)
     !data && setCheckSigns([...checkSigns, newItem]) // 不在已选中标签中 更新Input框中 选中标签

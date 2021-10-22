@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-09-09 17:26:11
  * @LastEditors: wujian
- * @LastEditTime: 2021-09-10 10:57:43
+ * @LastEditTime: 2021-10-22 10:23:14
  */
 import React, { useCallback, useEffect, useState } from 'react'
 import logo from '@/assets/resource/logo.svg'
@@ -24,7 +24,7 @@ function App() {
       setTime(new Date().toLocaleTimeString())
     }, 1000)
   }, [])
-
+  console.log(Button, 'Button 组件')
   return (
     <div className="App">
       <h2>{time}</h2>

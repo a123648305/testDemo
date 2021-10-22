@@ -3,15 +3,17 @@
  * @Author: wujian
  * @Date: 2021-09-09 17:26:11
  * @LastEditors: wujian
- * @LastEditTime: 2021-09-17 14:56:15
+ * @LastEditTime: 2021-09-17 20:33:39
  */
 import { defineConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
 import vitePluginImport from 'vite-plugin-imp' // 自动导入 按需加载vite插件  vite-plugin-style-import
 import path from 'path'
+console.log(process.cwd(), '00')
+
 export default defineConfig({
-  root: '',
-  base: '/', // 开发或生产环境服务的公共基础路径。
+  //   root: '',
+  // base: '/', // 开发或生产环境服务的公共基础路径。
   mode: 'development', // 'development'（开发模式），'production'（生产模式）
   plugins: [
     reactRefresh(),
@@ -45,7 +47,7 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    port: 2021,
+    port: 2022,
     open: false,
     proxy: {
       '/api': {
