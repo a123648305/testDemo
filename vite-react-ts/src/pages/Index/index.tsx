@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-09-10 10:19:10
  * @LastEditors: wujian
- * @LastEditTime: 2021-10-22 10:42:15
+ * @LastEditTime: 2021-10-22 21:23:52
  */
 import TagsDialog from '../../components/TagsDialog'
 import React, { useState } from 'react'
@@ -19,6 +19,24 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
   const test = (val: any) => {
     console.log(val, 'tset')
   }
+  const formData = {
+    id: '2042aec693e14d65a6a130b5868bb4a7',
+    name: '爱好2shg33',
+    code: 'hofggesbby11',
+    type: 'CHECKBOX',
+    value: [
+      {
+        key: '56e4489f36a140898b44243cf8ca1d05',
+        value: '篮球',
+      },
+      {
+        key: '3aed786dcefa486b9d092b368cd06786',
+        value: '足球2',
+      },
+    ],
+    schemaList: ['篮球', '足球'],
+  }
+
   //   console.log(qq, '555')
   const data = [
     { id: 1, name: '0000' },
@@ -55,6 +73,7 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
         onOk={() => {}}
         visible={visible}
         options={data}
+        formData={formData}
       />
     </div>
   )

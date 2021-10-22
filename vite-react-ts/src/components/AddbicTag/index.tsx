@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-10-21 18:57:31
  * @LastEditors: wujian
- * @LastEditTime: 2021-10-22 21:03:36
+ * @LastEditTime: 2021-10-22 21:27:58
  */
 import React, { useEffect, useState, useRef, useCallback } from 'react'
 import { Modal, Form, Select, Input, Space } from 'antd'
@@ -120,18 +120,19 @@ const AddChartDialog: React.FC<PropsType> = ({
   const formConfirm = async () => {
     try {
       const values = await formRes.validateFields()
-      const { code, name, type, schemaList, ...otherOptions } = values
-      console.log('Success:', values, otherOptions)
+      const { code, name, type, schemaList } = values
+      console.log('Success:', values, schemaList)
       //   onSumbit(values)
 
       let payload = { code, name, type }
       if (['RADIO', 'CHECKBOX'].includes(type)) {
         const oldFormData = formData.value
-        schemaList.map((item, index) => {
-          key: oldFormData[index].key || ''
-          value: item
-        })
-        payload.schemaList = schemaList
+        const arr = schemaList.map((item: string, index: number) => ({
+          key: oldFormData[index].key || '',
+          value: item,
+        }))
+        console.log(arr, 'schefjofj ')
+        payload.schemaList = arr
       }
 
       if (formData) {
@@ -157,27 +158,12 @@ const AddChartDialog: React.FC<PropsType> = ({
   }, [showRemake])
 
   useEffect(() => {
-    const data = {
-      id: '2042aec693e14d65a6a130b5868bb4a7',
-      name: '爱好2shg33',
-      code: 'hofggesbby11',
-      type: 'CHECKBOX',
-      value: [
-        {
-          key: '56e4489f36a140898b44243cf8ca1d05',
-          value: '篮球',
-        },
-        {
-          key: '3aed786dcefa486b9d092b368cd06786',
-          value: '足球2',
-        },
-      ],
-      schemaList: ['篮球', '足球'],
+    if (formData) {
+      const newFormData = JSON.parse(JSON.stringify(formData))
+      formRes.setFieldsValue(newFormData)
+      setShowFieldList(['RADIO', 'CHECKBOX'].includes(newFormData.type))
+      console.log(newFormData, 'data')
     }
-
-    const newFormData = JSON.parse(JSON.stringify(data))
-    formRes.setFieldsValue(newFormData)
-    console.log(newFormData, 'data')
   }, [])
 
   return (
@@ -231,6 +217,7 @@ const AddChartDialog: React.FC<PropsType> = ({
             style={{ width: 540, height: 32 }}
             maxLength={50}
             autoComplete="off"
+            disabled={formData?.id}
           />
         </Form.Item>
         <Form.Item
