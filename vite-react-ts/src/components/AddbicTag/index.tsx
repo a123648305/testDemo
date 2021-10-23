@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-10-21 18:57:31
  * @LastEditors: wujian
- * @LastEditTime: 2021-10-22 21:51:51
+ * @LastEditTime: 2021-10-22 00:36:31
  */
 import React, { useEffect, useState, useRef, useCallback } from 'react'
 import { Modal, Form, Select, Input, Space } from 'antd'
@@ -141,6 +141,7 @@ const AddChartDialog: React.FC<PropsType> = ({
       Sortable.create(document.querySelector('.test'), {
         animation: 150,
         handle: '.icon-liebiao',
+        delay: 50,
         onEnd: ({ newIndex, oldIndex }) => {
           console.log(newIndex, oldIndex, 'oo')
           if (newIndex === oldIndex) {
@@ -189,18 +190,7 @@ const AddChartDialog: React.FC<PropsType> = ({
             autoComplete="off"
           />
         </Form.Item>
-        <Form.Item
-          label="参数名称"
-          name="code"
-          required
-          rules={[
-            {
-              required: true,
-              whitespace: true,
-              message: '请输入参数名称',
-            },
-          ]}
-        >
+        <Form.Item label="参数名称" name="code">
           <Input
             placeholder="最多50个字母"
             style={{ width: 540, height: 32 }}
@@ -232,53 +222,58 @@ const AddChartDialog: React.FC<PropsType> = ({
         {fieldList && (
           <Form.List name="schemaList">
             {(fields, { add, remove }, { errors }) => (
-              <div className="test">
-                {fields.map((field, index) => (
-                  <Form.Item
-                    tip={`${JSON.stringify(field)}`}
-                    label={
-                      <span className="move-target">
-                        <i className="iconfont icon-liebiao" />
-                        选项{index + 1}
-                      </span>
-                    }
-                    key={field.key}
-                  >
+              <>
+                <div className="test">
+                  {fields.map((field, index) => (
                     <Form.Item
-                      {...field}
-                      validateTrigger={['onChange', 'onBlur']}
-                      rules={[
-                        {
-                          required: true,
-                          whitespace: true,
-                          message: '请输入',
-                        },
-                      ]}
-                      noStyle
+                      tip={`${JSON.stringify(field)}`}
+                      label={
+                        <span className="move-target">
+                          <i className="iconfont icon-liebiao" />
+                          选项{index + 1}
+                        </span>
+                      }
+                      key={field.key}
                     >
-                      <Input
-                        placeholder="最多50个字母"
-                        style={{ width: 540, height: 32 }}
-                        maxLength={50}
-                        autoComplete="off"
-                      />
+                      <Form.Item
+                        {...field}
+                        validateTrigger={['onChange', 'onBlur']}
+                        rules={[
+                          {
+                            required: true,
+                            whitespace: true,
+                            message: '请输入',
+                          },
+                        ]}
+                        noStyle
+                      >
+                        <Input
+                          placeholder="最多50个字母"
+                          style={{ width: 540, height: 32 }}
+                          maxLength={50}
+                          autoComplete="off"
+                        />
+                      </Form.Item>
+                      {fields.length > 0 ? (
+                        <i
+                          className="iconfont icon-cem_trash"
+                          onClick={() => remove(index)}
+                        />
+                      ) : null}
                     </Form.Item>
-                    {fields.length > 0 ? (
-                      <i
-                        className="iconfont icon-cem_trash"
-                        onClick={() => remove(index)}
-                      />
-                    ) : null}
-                  </Form.Item>
-                ))}
+                  ))}
+                </div>
                 <Form.Item noStyle>
-                  <span className="add_options" onClick={() => add()}>
+                  <span
+                    className="add_options ignore-elements"
+                    onClick={() => add()}
+                  >
                     <i className="iconfont icon-cem_add-to" />
                     添加选项
                   </span>
                   <Form.ErrorList errors={errors} />
                 </Form.Item>
-              </div>
+              </>
             )}
           </Form.List>
         )}
