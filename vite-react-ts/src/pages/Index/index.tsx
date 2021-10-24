@@ -3,19 +3,21 @@
  * @Author: wujian
  * @Date: 2021-09-10 10:19:10
  * @LastEditors: wujian
- * @LastEditTime: 2021-10-22 21:23:52
+ * @LastEditTime: 2021-10-24 13:37:45
  */
 import TagsDialog from '../../components/TagsDialog'
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Button } from 'antd'
 // import qq from '/test'
 import ColumFilter from '../../components/ColumFilter'
 
 import AddbicTag from '../../components/AddbicTag'
+import BatchAdd from '../../components/BatchAdd'
+import CustomTagSelect from '../../components/customTagSelect'
 
 type PropsType = {}
 const Index: React.FC<PropsType> = ({ ...props }) => {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
   const test = (val: any) => {
     console.log(val, 'tset')
   }
@@ -52,12 +54,17 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
     { id: 12, name: '1000' },
     { id: 13, name: '2000' },
   ]
+
+  const batchRef = useRef()
   return (
     <div>
       <img src="logo.png" alt="00" />
       <i className="iconfont icon-liebiao" />
       <Button type="primary" onClick={() => setVisible(!visible)}>
         show
+      </Button>
+      <Button type="primary" onClick={() => batchRef.current.show()}>
+        upload{' '}
       </Button>
       {/* <TagsDialog
         tags={[]}
@@ -68,13 +75,15 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
       {/* {visible && <span>000</span> && console.log(222)} */}
       <ColumFilter data={data} />
 
-      <AddbicTag
+      {/* <AddbicTag
         onCancel={() => setVisible(false)}
         onOk={() => {}}
         visible={visible}
         options={data}
         formData={formData}
-      />
+      /> */}
+
+      <BatchAdd ref={batchRef} />
     </div>
   )
 }
