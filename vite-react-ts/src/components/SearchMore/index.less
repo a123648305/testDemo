@@ -1,0 +1,128 @@
+.yt-search-more-selector-wrapper {
+  border-radius: 4px;
+  height: 32px;
+  max-width: 200px;
+  padding: 6px 12px;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    background: #e9eaec;
+  }
+  .ets-trigger {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+
+    .el-loading-spinner .circular {
+      width: 20px;
+      height: 20px;
+    }
+
+    .ets-trigger-pre-title {
+      color: #262626ff;
+    }
+
+    .ets-trigger-title {
+      color: #262626;
+      display: inline-block;
+      max-width: 116px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    i {
+      display: inline-block;
+      color: #8c8c8c;
+      margin-left: 2px;
+      font-size: 16px;
+      font-weight: bold;
+      transform-origin: center center;
+      transition: all 0.3s;
+    }
+    .icon-cem_arrow-launches {
+      color: #bebebe;
+    }
+  }
+
+  .ets-option-panel {
+    position: absolute;
+    color: #262626;
+    height: 0;
+    width: 240px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.13);
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 0 solid rgba(233, 233, 233, 1);
+    transition: all 0.3s;
+    left: 0;
+    top: 34px;
+    display: none;
+
+    .ets-search {
+      height: 38px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e5e5e5;
+      input {
+        height: 100%;
+        &::-webkit-input-placeholder {
+          color: #8c8c8cff;
+        }
+      }
+    }
+    .ets-list {
+      height: calc(~'100%' - 48px);
+      overflow: scroll;
+      .ets-list-item {
+        height: 36px;
+        line-height: 36px;
+        padding: 0 16px;
+        overflow: hidden;
+        cursor: pointer;
+        color: #262626ff;
+        &:hover {
+          background: #fafafa;
+        }
+      }
+      .ets-list-item-active {
+        color: #7262fdff;
+      }
+    }
+  }
+
+  .ets-show {
+    border-width: 1px;
+    width: 314px;
+    height: 236px;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    display: block;
+    & > .ets-add {
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+}
+
+.yt-search-more-selector-wrapper-show {
+  background: #7262fdff;
+  &:hover {
+    background: #7262fdff;
+  }
+  .ets-trigger {
+    .ets-trigger-pre-title {
+      color: white;
+    }
+
+    .ets-trigger-title {
+      color: white;
+    }
+
+    i {
+      color: white;
+    }
+  }
+}

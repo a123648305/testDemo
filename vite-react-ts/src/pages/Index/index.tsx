@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-09-10 10:19:10
  * @LastEditors: wujian
- * @LastEditTime: 2021-10-24 13:37:45
+ * @LastEditTime: 2021-11-05 15:27:21
  */
 import TagsDialog from '../../components/TagsDialog'
 import React, { useState, useRef } from 'react'
@@ -14,6 +14,8 @@ import ColumFilter from '../../components/ColumFilter'
 import AddbicTag from '../../components/AddbicTag'
 import BatchAdd from '../../components/BatchAdd'
 import CustomTagSelect from '../../components/customTagSelect'
+import SearchMore from '../../components/SearchMore'
+import EmotionTrend from '../../components/EmotionTrend'
 
 type PropsType = {}
 const Index: React.FC<PropsType> = ({ ...props }) => {
@@ -83,7 +85,14 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
         formData={formData}
       /> */}
 
-      <BatchAdd ref={batchRef} />
+      {/* <BatchAdd ref={batchRef} /> */}
+
+      <SearchMore
+        onSearchMore={(e) => console.log(e, 'sumbit')}
+        fetchSchemaList={() => {}}
+      />
+
+      <EmotionTrend />
     </div>
   )
 }

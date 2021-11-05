@@ -4,7 +4,7 @@
  * @Author: wangshuzhao
  * @Date: 2019-08-28 15:05:39
  * @LastEditors: wujian
- * @LastEditTime: 2021-10-24 13:47:18
+ * @LastEditTime: 2021-10-25 14:06:42
  */
 import React, { Fragment } from 'react'
 import { Button, Modal, Spin, message, Upload, Result } from 'antd'
@@ -152,9 +152,11 @@ export default class AddContact extends React.Component {
       multiple: true,
       action: '',
       accept: '.xls, .xlsx,', //只接受xlsx格式
+      showUploadList: false,
       beforeUpload: (file) => {
         console.log(file, 'filebeac')
         this.readFile(file)
+        return false
       },
       onChange(info) {
         const { status } = info.file

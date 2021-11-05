@@ -1,0 +1,45 @@
+.workorder_screen {
+  max-height: 300px;
+  min-height: 340px;
+  overflow-y: scroll;
+  width: 590px;
+  position: relative;
+
+  .screen_header {
+    margin-bottom: 20px;
+    .header_title {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 600;
+      color: #262626;
+    }
+    .header_desc {
+      color: #8c8c8c;
+      font-weight: 400;
+      font-size: 14px;
+      float: right;
+      margin-right: 20px;
+    }
+  }
+  .screen_content {
+    min-height: 255px;
+    .screen_content_item {
+      margin-bottom: 15px;
+      .ant-select-multiple .ant-select-selection-item {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .add-item {
+    margin-top: 20px;
+  }
+  .add-item:hover {
+    cursor: pointer;
+  }
+  .screen_bottom {
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+}
