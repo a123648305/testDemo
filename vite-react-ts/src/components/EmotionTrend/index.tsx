@@ -19,7 +19,7 @@ import { Popover } from 'antd'
 import EchartReact from 'echarts-for-react'
 import './index.less'
 
-import { options } from './test'
+// import { options } from './test'
 
 type PropsType = {
   loading: boolean
@@ -37,7 +37,8 @@ const EmotionTrend: React.FC<PropsType> = ({ loading, title }) => {
   const [showLabel, setShowLabel] = useState(false)
   const [chartType, setChartType] = useState('COUNT')
   const [timeType, setTimeType] = useState('MONTH')
-  console.log(options)
+  // console.log(options)
+  getOption(1,2,3,4,5)
   return (
     <div className="emotionTrend_box">
       <EchartReact

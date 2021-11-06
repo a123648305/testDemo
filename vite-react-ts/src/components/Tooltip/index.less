@@ -1,0 +1,106 @@
+.yt_tooltip_wrapper {
+  min-width: 128px;
+  color: #262626;
+
+  .title_wrapper {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px 0;
+  }
+
+  .content_wrapper {
+    max-height: 160px;
+    overflow: auto;
+    padding-bottom: 8px;
+    padding: 0 16px;
+    margin: 8px 0;
+  }
+
+  .footer_wrapper {
+    background: #f7f8fa;
+    border-top: 1px solid #e5e5e5;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 0 8px;
+
+    .item {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+      color: #8c8c8c;
+      font-size: 12px;
+
+      &:hover {
+        .icon_style,
+        .title_style {
+          color: #0847a6;
+        }
+      }
+
+      // .icon_style {
+      // font-size: 12px;
+      // }
+
+      .title_style {
+        margin-left: 6px;
+      }
+    }
+  }
+  &.yt_new_tooltip_wrapper {
+    min-width: 142px;
+    color: @tip_color;
+    font-size: 12px;
+
+    .title_wrapper {
+      font-size: 12px;
+      font-weight: 400;
+      color: @title_color;
+    }
+
+    .footer_wrapper {
+      background: @divider_color;
+      border-radius: 0 0 2px 2px;
+    }
+    .item {
+      &:hover {
+        .icon_style,
+        .title_style {
+          color: @main_color;
+        }
+      }
+    }
+  }
+
+  // 服务洞察 tooltipl类名
+  &.yt_new_sericeInsisht_tooltip_wrapper {
+    width: 156px !important;
+    height: 91px !important;
+    // color: @tip_color;
+    color: #5a8ef8;
+    font-size: 12px;
+    border-radius: 2px;
+    .title_wrapper {
+      font-size: 12px;
+      font-weight: 400;
+      color: @title_color;
+    }
+
+    .footer_wrapper {
+      background: @divider_color;
+      // background: #5a8ef8;
+      // margin-bottom: 0;
+      bottom: 0;
+      border-radius: 0 0 2px 2px;
+    }
+    .item {
+      &:hover {
+        .icon_style,
+        .title_style {
+          color: @main_color;
+        }
+      }
+    }
+  }
+}
