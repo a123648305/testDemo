@@ -3,23 +3,13 @@
  * @Author: wujian
  * @Date: 2021-11-04 11:17:33
  * @LastEditors: wujian
- * @LastEditTime: 2021-11-05 15:58:26
+ * @LastEditTime: 2021-11-16 14:38:09
  */
 import React, { useState } from 'react'
-// import SectionCom, { validateData } from '@/public/components/SectionCom';
-// import ChartTitle from '@/public/components/ChartTitle';
-// import ChartSelect from '@/public/components/SingleSelectButton';
-import {
-  getOption,
-  handleOnMoreClick,
-  timeOptions,
-  formulaOptions,
-} from './utils'
+import { getOption } from './utils'
 import { Popover } from 'antd'
 import EchartReact from 'echarts-for-react'
 import './index.less'
-
-// import { options } from './test'
 
 type PropsType = {
   loading: boolean
@@ -38,7 +28,7 @@ const EmotionTrend: React.FC<PropsType> = ({ loading, title }) => {
   const [chartType, setChartType] = useState('COUNT')
   const [timeType, setTimeType] = useState('MONTH')
   // console.log(options)
-  getOption(1,2,3,4,5)
+  const options = getOption(1, 2, 3, 4, 5)
   return (
     <div className="emotionTrend_box">
       <EchartReact

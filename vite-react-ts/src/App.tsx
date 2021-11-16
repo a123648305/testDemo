@@ -3,14 +3,15 @@
  * @Author: wujian
  * @Date: 2021-09-09 17:26:11
  * @LastEditors: wujian
- * @LastEditTime: 2021-10-23 18:36:28
+ * @LastEditTime: 2021-11-16 15:22:29
  */
 import React, { useCallback, useEffect, useState } from 'react'
 import logo from '@/assets/resource/logo.svg'
 import './App.css'
 // import Index from '@/pages/Index/index.tsx'
 import Index from './pages/Index'
-import { Button } from 'antd'
+import { Button, Space } from 'antd'
+import { Routes, Route, Link } from 'react-router-dom'
 
 import Detail from './pages/detail'
 
@@ -29,12 +30,14 @@ function App() {
   console.log(Button, 'Button 组件')
   return (
     <div className="App">
-      <h2>{time}</h2>
-      <h2>{count}</h2>
-      <Button onClick={() => setCount(count + 1)}> changeCount</Button>
-      <Index />
-
-      {/* <Detail /> */}
+      <Space>
+        <Link to="/">to index</Link>
+        <Link to="detail">to detail</Link>
+      </Space>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="detail" element={<Detail />} />
+      </Routes>
     </div>
   )
 }
