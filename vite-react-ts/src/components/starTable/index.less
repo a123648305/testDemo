@@ -1,0 +1,55 @@
+.scale_table{
+    width: auto;
+    .ant-table-thead > tr{
+        &>th{
+            // border: 1px solid red;
+        }
+        .oblique_angle{
+            background: linear-gradient(to top right,#fff 0,#fff calc(50% - 1px),#e1e4eb 50%,#fff calc(50% + 1px),#fff);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .header_title{
+            &>.ant-input{
+                width: auto;
+                text-align: center;
+    
+                font-size: 14px;
+                font-weight: 500;
+                color: #262626;
+                &:hover{
+    
+                }
+            }
+            .edit_input{
+                min-width: 156px;
+                background: #ffffff;
+                border: 1px solid #e5e5e5;
+            }
+        }
+    }
+    .header_first_column{
+        background: #fafafa;
+        &>.ant-input{
+            text-align: center;
+            width: auto;
+            font-size: 14px;
+            font-weight: 500;
+            color: #262626;
+            &:hover{
+
+            }
+        }
+        .edit_input{
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+        }
+    }
+    .ant-table-cell-fix-left{
+        background: #fafafa;
+    }
+
+}

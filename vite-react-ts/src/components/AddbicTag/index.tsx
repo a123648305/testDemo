@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-10-21 18:57:31
  * @LastEditors: wujian
- * @LastEditTime: 2021-10-22 00:36:31
+ * @LastEditTime: 2021-12-14 09:48:37
  */
 import React, { useEffect, useState, useRef, useCallback } from 'react'
 import { Modal, Form, Select, Input, Space } from 'antd'
@@ -66,6 +66,7 @@ const AddChartDialog: React.FC<PropsType> = ({
 
   const [showRemake, setShowRemake] = useState(false)
   const [fieldList, setShowFieldList] = useState(false)
+  const [test, SetTest] = useState({ a: false })
 
   const addOptions = () => {
     const obj = {
@@ -136,14 +137,17 @@ const AddChartDialog: React.FC<PropsType> = ({
     }
   }, [])
 
-  useEffect(() => {
-    if (fieldList) {
+  useEffect(() => ta(test))
+
+  const ta = (ccc) => {
+    console.log(ccc, '0000')
+    document.querySelector('.test') &&
       Sortable.create(document.querySelector('.test'), {
         animation: 150,
         handle: '.icon-liebiao',
         delay: 50,
         onEnd: ({ newIndex, oldIndex }) => {
-          console.log(newIndex, oldIndex, 'oo')
+          console.log(newIndex, oldIndex, 'oo', ccc)
           if (newIndex === oldIndex) {
             return
           }
@@ -153,9 +157,9 @@ const AddChartDialog: React.FC<PropsType> = ({
           //   })
         },
       })
-    }
-  }, [fieldList])
+  }
 
+  console.log(test, 'prp')
   return (
     <Modal
       className="yt_customer_modal"
@@ -266,7 +270,10 @@ const AddChartDialog: React.FC<PropsType> = ({
                 <Form.Item noStyle>
                   <span
                     className="add_options ignore-elements"
-                    onClick={() => add()}
+                    onClick={() => {
+                      add()
+                      SetTest({ a: true })
+                    }}
                   >
                     <i className="iconfont icon-cem_add-to" />
                     添加选项

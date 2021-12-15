@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-09-10 10:19:10
  * @LastEditors: wujian
- * @LastEditTime: 2021-11-05 15:27:21
+ * @LastEditTime: 2021-12-15 16:49:43
  */
 import TagsDialog from '../../components/TagsDialog'
 import React, { useState, useRef } from 'react'
@@ -16,6 +16,8 @@ import BatchAdd from '../../components/BatchAdd'
 import CustomTagSelect from '../../components/customTagSelect'
 import SearchMore from '../../components/SearchMore'
 import EmotionTrend from '../../components/EmotionTrend'
+
+import StarTable from '../../components/starTable'
 
 type PropsType = {}
 const Index: React.FC<PropsType> = ({ ...props }) => {
@@ -30,11 +32,11 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
     type: 'CHECKBOX',
     value: [
       {
-        key: '56e4489f36a140898b44243cf8ca1d05',
+        id: '56e4489f36a140898b44243cf8ca1d05',
         value: '篮球',
       },
       {
-        key: '3aed786dcefa486b9d092b368cd06786',
+        id: '3aed786dcefa486b9d092b368cd06786',
         value: '足球2',
       },
     ],
@@ -58,6 +60,44 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
   ]
 
   const batchRef = useRef()
+
+  const testData = [
+    {
+      id: 16,
+      title: '矩阵行1',
+      number: 1,
+      colItems: [
+        {
+          id: 14,
+          title: '选项1',
+          value: false,
+        },
+        {
+          id: 15,
+          title: '选项2',
+          value: true,
+        },
+      ],
+    },
+    {
+      id: 17,
+      title: '矩阵行2',
+      number: 2,
+      colItems: [
+        {
+          id: 14,
+          title: '选项1',
+          value: 1,
+        },
+        {
+          id: 15,
+          title: '选项2',
+          value: 2,
+        },
+      ],
+    },
+  ]
+
   return (
     <div>
       <img src="logo.png" alt="00" />
@@ -80,7 +120,7 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
       {/* <AddbicTag
         onCancel={() => setVisible(false)}
         onOk={() => {}}
-        visible={visible}
+        visible={true}
         options={data}
         formData={formData}
       /> */}
@@ -92,7 +132,17 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
         fetchSchemaList={() => {}}
       />
 
-      <EmotionTrend />
+      {/* <EmotionTrend /> */}
+
+      <StarTable
+        questionData={testData}
+        onTableChange={function (payload: any): void {
+          throw new Error('Function not implemented.')
+        }}
+        // cellRender={}
+        cellType="Radio"
+        // cellType="Checkbox"
+      />
     </div>
   )
 }
