@@ -19,6 +19,24 @@
       top: 0;
       left: 0;
     }
+    .header_title {
+      .edit_input {
+        text-align: center;
+        border: 1px solid transparent;
+        &:focus {
+          background: #ffffff;
+          border-color: #d9d9d9;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &:hover {
+        .edit_input {
+          border: 1px solid #d9d9d9;
+        }
+      }
+    }
   }
   .header_first_column {
     background: #fafafa;
@@ -39,22 +57,14 @@
   .ant-table-cell-fix-left {
     background: #fafafa;
   }
-  .header_title {
-    .edit_input {
-      text-align: center;
-      border: 1px solid transparent;
-      &:focus {
-        background: #ffffff;
-        border-color: #d9d9d9;
-      }
-      &:hover {
-        cursor: pointer;
-      }
-    }
-    &:hover {
-      .edit_input {
-        border: 1px solid #d9d9d9;
-      }
-    }
+
+  .editable-cell-value-wrap {
+    padding: 5px 12px;
+    cursor: pointer;
+  }
+  .editable-row:hover .editable-cell-value-wrap {
+    padding: 4px 11px;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
   }
 }

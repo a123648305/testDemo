@@ -3,11 +3,11 @@
  * @Author: wujian
  * @Date: 2021-09-10 10:19:10
  * @LastEditors: wujian
- * @LastEditTime: 2021-12-15 16:49:43
+ * @LastEditTime: 2021-12-16 17:40:11
  */
 import TagsDialog from '../../components/TagsDialog'
 import React, { useState, useRef } from 'react'
-import { Button } from 'antd'
+import { Button, Rate } from 'antd'
 // import qq from '/test'
 import ColumFilter from '../../components/ColumFilter'
 
@@ -87,16 +87,19 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
         {
           id: 14,
           title: '选项1',
-          value: 1,
+          value: false,
         },
         {
           id: 15,
           title: '选项2',
-          value: 2,
+          value: true,
         },
       ],
     },
   ]
+
+  // 表格数据
+  const [questionsData, setQuestionsData] = useState(testData)
 
   return (
     <div>
@@ -135,13 +138,16 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
       {/* <EmotionTrend /> */}
 
       <StarTable
-        questionData={testData}
-        onTableChange={function (payload: any): void {
-          throw new Error('Function not implemented.')
+        questionData={questionsData}
+        onTableChange={(data) => {
+          console.log(data, 'ddd')
+          setQuestionsData(data)
         }}
-        // cellRender={}
+        //cellRender={<Rate />}
         cellType="Radio"
-        // cellType="Checkbox"
+        //cellType="Checkbox"
+        // cellType="Rate"
+        // columnEditDisabled
       />
     </div>
   )

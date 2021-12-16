@@ -3,9 +3,9 @@
  * @Author: wujian
  * @Date: 2021-12-14 18:33:28
  * @LastEditors: wujian
- * @LastEditTime: 2021-12-16 18:41:08
+ * @LastEditTime: 2021-12-16 18:37:05
  */
-import React, { useEffect, useState, useRef, InputHTMLAttributes } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Table, Radio, Input, Checkbox, Form } from 'antd'
 import produce from 'immer'
 import './index.less'
@@ -35,6 +35,75 @@ type PropsType = {
   onTableChange: (payload: any) => void
 }
 
+/**
+ * 表格标题单元格 可编辑.
+ * @param {string} text - 此单元格文本数据.
+ * @param {object} record - row数据.
+ * @param {function} handleTableChange - 更新回调方法.
+ * @param {boolean} editable - 表格标题单元格可编辑 默认为True.
+ */
+const EditableCell = (
+  text: string,
+  record: object,
+  handleTableChange: (val: string, type: string, record: object) => void,
+  editable: boolean = true
+) => {
+  const [editing, setEditing] = useState(false)
+  const inputRef = useRef(null)
+  const [form] = Form.useForm()
+  useEffect(() => {
+    if (editing) {
+      inputRef.current.focus()
+    }
+  }, [editing])
+
+  const toggleEdit = () => {
+    setEditing(!editing)
+    form.setFieldsValue({
+      //   [dataIndex]: record[dataIndex],
+      title: text,
+    })
+  }
+
+  const save = async () => {
+    try {
+      const values = await form.validateFields()
+      console.log(values, 'form', values.title)
+      toggleEdit()
+      handleTableChange(values.title, 'row', record)
+    } catch (errInfo) {
+      console.log('Save failed:', errInfo)
+    }
+  }
+
+  let childNode = <span>{text}</span>
+
+  if (editable) {
+    childNode = editing ? (
+      <Form form={form}>
+        <Form.Item
+          style={{ margin: 0 }}
+          name="title"
+          rules={[
+            {
+              required: true,
+              message: '不能为空',
+            },
+          ]}
+        >
+          <Input ref={inputRef} onPressEnter={save} onBlur={save} />
+        </Form.Item>
+      </Form>
+    ) : (
+      <div className="editable-cell-value-wrap" onClick={toggleEdit}>
+        {text}
+      </div>
+    )
+  }
+
+  return childNode
+}
+
 const StarTable: React.FC<PropsType> = ({
   questionData,
   cellType,
@@ -53,7 +122,8 @@ const StarTable: React.FC<PropsType> = ({
       align: 'center',
       width: 180,
       editable: true,
-      render: (text: string, row: cellItem) => headerTitle(text, row, 'row'),
+      render: (text: string, row: cellItem) =>
+        EditableCell(text, row, handleTitleChange),
     },
   ]
 
@@ -66,7 +136,7 @@ const StarTable: React.FC<PropsType> = ({
     name: string,
     row: cellItem
   ) => {
-    console.log(val, type, row, name, 'updateTable')
+    console.log(val, type, row, name, 'change')
 
     if (type === 'Radio') {
       // 更新对应列表数据value 值
@@ -106,7 +176,8 @@ const StarTable: React.FC<PropsType> = ({
 
   // 编辑标题 方法更新
   const handleTitleChange = (e: any, type: string, row: any) => {
-    const inputValue = e.target.value
+    console.log(e, type, 'input', row)
+    const inputValue = e.target ? e.target.value : e
     if (type === 'row') {
       // 行标题更新
       const newData = produce(questionData, (draft) => {
@@ -131,7 +202,7 @@ const StarTable: React.FC<PropsType> = ({
   }
 
   // 表格标题 带编辑框
-  const headerTitle = (val: string, cellItem: cellItem, type: string) => (
+  const headerTitle = (val: string, cellItem: cellItem) => (
     <div className="header_title">
       {columnEditDisabled ? (
         <span>{val}</span>
@@ -140,7 +211,7 @@ const StarTable: React.FC<PropsType> = ({
           bordered={false}
           defaultValue={val}
           className="edit_input"
-          onBlur={(e) => handleTitleChange(e, type, cellItem)}
+          onBlur={(e) => handleTitleChange(e, 'column', cellItem)}
         />
       )}
     </div>
@@ -151,7 +222,7 @@ const StarTable: React.FC<PropsType> = ({
     const type = cellType || 'customer' // 内置类型或者自定义渲染
     const { title, value, id } = cellItem
     let columnObj = {
-      title: headerTitle(title, cellItem, 'column'),
+      title: headerTitle(title, cellItem),
       dataIndex: title,
       key: id,
       align: 'center',
@@ -183,6 +254,8 @@ const StarTable: React.FC<PropsType> = ({
   }
 
   useEffect(() => {
+    console.log(questionData, 'table testData')
+
     let showColumn: any[] = []
     let showDataSource: any[] = []
 
@@ -198,6 +271,7 @@ const StarTable: React.FC<PropsType> = ({
       })
       showDataSource.push(row)
     })
+    console.log(showColumn, 'showColumn')
     setColumns([...fixedColumns, ...showColumn])
     setDataSource(showDataSource)
   }, [questionData])
