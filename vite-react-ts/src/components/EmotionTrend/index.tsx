@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-11-04 11:17:33
  * @LastEditors: wujian
- * @LastEditTime: 2021-11-16 14:38:09
+ * @LastEditTime: 2022-01-06 11:51:25
  */
 import React, { useState } from 'react'
 import { getOption } from './utils'
@@ -34,7 +34,7 @@ const EmotionTrend: React.FC<PropsType> = ({ loading, title }) => {
       <EchartReact
         // onChartReady={this.getChartRef}
         theme="yt_multi_color_10"
-        option={options}
+        option={[]}
         // opts={{ devicePixelRatio: 2 }}
         style={{ width: '100%', height: '100%' }}
       />

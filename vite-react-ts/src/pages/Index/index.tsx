@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-09-10 10:19:10
  * @LastEditors: wujian
- * @LastEditTime: 2021-12-16 17:40:11
+ * @LastEditTime: 2022-01-10 14:52:33
  */
 import TagsDialog from '../../components/TagsDialog'
 import React, { useState, useRef } from 'react'
@@ -16,8 +16,20 @@ import BatchAdd from '../../components/BatchAdd'
 import CustomTagSelect from '../../components/customTagSelect'
 import SearchMore from '../../components/SearchMore'
 import EmotionTrend from '../../components/EmotionTrend'
+import SortDemo from '../../components/sortDemo'
 
 import StarTable from '../../components/starTable'
+import MatrxTable from '../../components/MatrxComponent'
+import matrxData from './test'
+import './index.less'
+
+enum cellTypes {
+  MATRIX_SINGLE_CHOICE = 'Radio',
+  MATRIX_MULTIPLE_CHOICE = 'Checkbox',
+  MATRIX_SCALE = 'Rate',
+  STAR = 'Star',
+  CIRCLE = 'Circle',
+}
 
 type PropsType = {}
 const Index: React.FC<PropsType> = ({ ...props }) => {
@@ -101,6 +113,27 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
   // 表格数据
   const [questionsData, setQuestionsData] = useState(testData)
 
+  console.log(matrxData, 'matrxDatamatrxData')
+
+  const { matrixQuestions, matrixAnswers, type, style, limit } = matrxData
+
+  const options = matrixQuestions.map((item) => {
+    const answerItem = matrixAnswers.find((k) => k.id === item.id)
+    item.colItems.map((c, index) => {
+      if (style) {
+        //矩阵量表时 星星前面的也点亮  圆圈只点亮当前
+        c.value =
+          style === cellTypes['STAR']
+            ? limit[0] + index <= answerItem.score
+            : limit[0] + index === answerItem.score
+      } else {
+        c.value = answerItem ? answerItem.choosed.includes(c.title) : false
+      }
+      return c
+    })
+    return item
+  })
+
   return (
     <div>
       <img src="logo.png" alt="00" />
@@ -135,9 +168,9 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
         fetchSchemaList={() => {}}
       />
 
-      {/* <EmotionTrend /> */}
+      <EmotionTrend />
 
-      <StarTable
+      {/* <StarTable
         questionData={questionsData}
         onTableChange={(data) => {
           console.log(data, 'ddd')
@@ -145,10 +178,27 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
         }}
         //cellRender={<Rate />}
         cellType="Radio"
-        //cellType="Checkbox"
+        columnEditDisabled={false} //cellType="Checkbox"
         // cellType="Rate"
         // columnEditDisabled
+      /> */}
+
+      <Rate
+        className="test"
+        character={({ index }) => <span className="rbq">{index}</span>}
       />
+
+      <Rate character="好" allowHalf />
+
+      <MatrxTable
+        questionData={options}
+        cellType="Star"
+        rowEditDisabled
+        columnEditDisabled
+        cellDisabled
+      />
+
+      <SortDemo />
     </div>
   )
 }
