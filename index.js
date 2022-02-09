@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-08-05 11:21:50
  * @LastEditors: wujian
- * @LastEditTime: 2021-09-13 16:56:07
+ * @LastEditTime: 2022-02-09 14:25:44
  */
 const Koa = require('koa')
 const routes = require('./router')
@@ -14,6 +14,7 @@ const render = require('koa-ejs')
 const app = new Koa()
 const router = new Router()
 const path = require('path')
+const port = process.env.PORT || 3000
 
 render(app, {
   root: path.join(__dirname, 'views'),
@@ -41,6 +42,6 @@ router.use(routes.routes())
 app.use(middleware.logs)
 app.use(router.routes())
 
-app.listen(3000, () => {
-  console.log('server is on port 3000')
+app.listen(port, () => {
+  console.log('server is on port ' + port)
 })
