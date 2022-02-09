@@ -1,0 +1,49 @@
+.yt_market_bm_analysis_wrapper {
+  height: 100%;
+}
+.yt_market_bm_analysis_wrapper .content {
+  background: #f2f3f5;
+  padding: 12px;
+  overflow: auto;
+  height: calc(100% - 48px);
+}
+
+.yt_market_bm_sanalysis_pie_line_chart {
+  height: 320px;
+  background: white;
+}
+.yt_market_bm_sanalysis_pie_line_chart .view_config {
+  color: #8c8c8c;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yt_market_bm_sanalysis_pie_line_chart .view_config i {
+  font-size: 18px;
+  margin: 0 4px;
+}
+.yt_market_bm_sanalysis_pie_line_chart .view_config::after {
+  content: '';
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 8px;
+  height: 12px;
+  width: 1px;
+  background: #e5e5e5;
+}
+.yt_market_bm_sanalysis_pie_line_chart .hoverable:hover {
+  color: #0847a6;
+}
+
+.yt_market_bm_sanalysis_bar_line_chart {
+  height: 320px;
+  background: white;
+}
+
+.yt_market_bm_analysis_bar_line_in_one_chart {
+  height: 320px;
+  background: white;
+}
+

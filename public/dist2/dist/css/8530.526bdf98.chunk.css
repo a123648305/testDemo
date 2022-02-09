@@ -1,0 +1,91 @@
+.yt-feedback-descript-wrapper {
+  height: 100%;
+  overflow: auto;
+}
+.yt-feedback-descript {
+  padding: 20px;
+  width: 970px;
+  margin: 0 auto;
+}
+.yt-feedback-descript > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+.yt-feedback-descript > div:nth-child(1) > span:nth-child(1) {
+  font-size: 30px;
+  color: #262626;
+  font-weight: bold;
+  margin-left: -18px;
+}
+.yt-feedback-descript > div:nth-child(1) > span:nth-child(2) {
+  font-size: 14px;
+  color: #8c8c8c;
+  margin-top: 12px;
+}
+.yt-feedback-descript > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+.yt-feedback-descript > div:nth-child(2) .flex-item {
+  margin-right: 50px;
+}
+.yt-feedback-descript > div:nth-child(2) .flex-item > div {
+  display: flex;
+  margin-top: 36px;
+  color: #262626;
+  flex-direction: column;
+}
+.yt-feedback-descript > div:nth-child(2) .flex-item > div > span:nth-child(1) {
+  font-size: 20px;
+  font-weight: bold;
+}
+.yt-feedback-descript > div:nth-child(2) .flex-item > div > span:last-child {
+  font-size: 14px;
+  margin-top: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.yt-feedback-descript > div:nth-child(2) > div:nth-child(1) {
+  margin-right: 50px;
+}
+.yt-feedback-descript > div:nth-child(2) > div:nth-child(1) > div {
+  display: flex;
+  margin-top: 36px;
+  color: #262626;
+  flex-direction: column;
+}
+.yt-feedback-descript > div:nth-child(2) > div:nth-child(1) > div > span:nth-child(1) {
+  font-size: 20px;
+  font-weight: bold;
+}
+.yt-feedback-descript > div:nth-child(2) > div:nth-child(1) > div > span:last-child {
+  font-size: 14px;
+  margin-top: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.yt-feedback-descript > div:nth-child(2) > div:nth-child(2) {
+  margin-right: 50px;
+}
+.yt-feedback-descript > div:nth-child(2) > div:nth-child(2) > div {
+  display: flex;
+  margin-top: 36px;
+  color: #262626;
+  flex-direction: column;
+}
+.yt-feedback-descript > div:nth-child(2) > div:nth-child(2) > div > span:nth-child(1) {
+  font-size: 20px;
+  font-weight: bold;
+}
+.yt-feedback-descript > div:nth-child(2) > div:nth-child(2) > div > span:last-child {
+  font-size: 14px;
+  margin-top: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.yt-feedback-descript > div:nth-child(2) > div:nth-child(2) img {
+  width: 480px;
+  min-width: 600px;
+  margin-top: 16px;
+}
+

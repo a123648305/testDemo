@@ -1,0 +1,159 @@
+.yt_market_hot_discovery_bar_line_chart {
+  height: 320px;
+  background: white;
+}
+
+.yt_market_hot_discovery_double_bar_chart {
+  height: 320px;
+  background: white;
+}
+
+.yt_market_hot_discovery_scatter_table_chart {
+  height: 520px;
+  background: white;
+}
+.yt_market_hot_discovery_scatter_table_chart .scatter_content {
+  display: flex;
+  height: 100%;
+}
+.yt_market_hot_discovery_scatter_table_chart .scatter_content .content_chart {
+  width: calc(100% - 556px);
+}
+.yt_market_hot_discovery_scatter_table_chart .scatter_content .content_table {
+  width: 556px;
+  margin-left: 36px;
+}
+
+.yt-awp-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+.yt-awp-pagination > span {
+  color: #8c8c8c;
+}
+.yt-awp-pagination .total_num span {
+  color: #262626;
+}
+.yt-awp-pagination .el-select-dropdown {
+  top: -144px !important;
+}
+.yt-awp-pagination .el-pagination {
+  padding: 0 5px 2px 5px;
+}
+.yt-awp-pagination .el-pagination .el-pager li {
+  font-size: 14px;
+}
+.yt-awp-pagination .el-pagination .el-pagination__sizes {
+  margin: 0 10px;
+}
+.yt-awp-pagination .el-pagination .el-pagination__sizes .el-select .el-input .el-input__icon {
+  width: 32px;
+}
+.yt-awp-pagination .el-pagination .el-pagination__sizes .el-select .el-input .el-input__inner {
+  border-radius: 4px;
+  padding-right: 5px;
+  padding: 3px 8px;
+}
+.yt-awp-pagination .new_pagination .el-pagination {
+  display: inline-block;
+}
+.yt-awp-pagination .new_pagination .el-pagination .el-pager li {
+  font-size: 14px;
+}
+.yt-awp-pagination .new_pagination .el-pagination .btn-next:hover i {
+  color: #0847a6;
+}
+.yt-awp-pagination .new_pagination .select-wrapper {
+  width: 90px;
+  height: 26px;
+  line-height: 26px;
+  margin: 0 10px;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: top;
+}
+.yt-awp-pagination .new_pagination .select-wrapper .rc-select:hover {
+  border-color: #0847a6;
+}
+.yt-awp-pagination .new_pagination .select-wrapper .rc-select .rc-select-selection--single {
+  height: 26px;
+  line-height: 26px;
+  border-radius: 4px;
+}
+.yt-awp-pagination .new_pagination .select-wrapper .rc-select .rc-select-selection--single .rc-select-selection__rendered {
+  height: 26px;
+  line-height: 26px;
+  margin-left: 8px;
+}
+.yt-awp-pagination .new_pagination .select-wrapper i {
+  top: 3px !important;
+  right: 3px;
+}
+
+.yt_hot_discovery_simple_talbe_wrapper {
+  padding: 50px 20px 20px 0;
+}
+.yt_hot_discovery_simple_talbe_wrapper .st_title {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 16px 12px 16px;
+}
+.yt_hot_discovery_simple_talbe_wrapper .st_title > span {
+  padding: 0 4px;
+  flex: 1 0 0;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+.yt_hot_discovery_simple_talbe_wrapper .st_content {
+  height: calc(100% - 64px);
+  box-sizing: border-box;
+  overflow: auto;
+}
+.yt_hot_discovery_simple_talbe_wrapper .st_content .st_row {
+  padding: 8px 0;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 6px 16px;
+}
+.yt_hot_discovery_simple_talbe_wrapper .st_content .st_row .st_col {
+  padding: 0 4px;
+  flex: 1 0 0;
+  overflow: hidden;
+}
+.yt_hot_discovery_simple_talbe_wrapper .st_content .st_row .st_col > span {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.yt_hot_discovery_simple_talbe_wrapper .st_content .st_row .st_col .ellipsis_value {
+  text-align: right;
+  width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+.yt_hot_discovery_simple_talbe_wrapper .st_content > .st_row:first-child {
+  margin-top: 0;
+}
+.yt_hot_discovery_simple_talbe_wrapper .st_content > .st_row:last-child {
+  margin-bottom: 0;
+}
+.yt_hot_discovery_simple_talbe_wrapper .st_bottom {
+  margin-top: 8px;
+}
+
+.yt_market_hot_discovery_wrapper {
+  height: 100%;
+}
+.yt_market_hot_discovery_wrapper .content {
+  background: #f2f3f5;
+  padding: 12px;
+  overflow: auto;
+  height: calc(100% - 48px);
+}
+

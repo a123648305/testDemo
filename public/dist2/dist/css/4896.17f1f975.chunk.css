@@ -1,0 +1,104 @@
+.yt_wechat_push_table_page {
+  color: #262626;
+  overflow: auto;
+}
+.yt_wechat_push_table_page .top_desc_dialog {
+  width: 50%;
+}
+.yt_wechat_push_table_page .top_desc_dialog .el-dialog__header {
+  padding: 36px 48px 0;
+}
+.yt_wechat_push_table_page .top_desc_dialog .el-dialog__title {
+  color: #262626;
+}
+.yt_wechat_push_table_page .top_desc_dialog .el-dialog__body {
+  color: #8c8c8c;
+  padding: 24px 48px 36px;
+}
+.yt_wechat_push_table_page .content .table_zone {
+  width: 100%;
+}
+.yt_wechat_push_table_page .content .table_zone .top_desc {
+  width: 100%;
+  height: 64px;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 23px;
+  padding-left: 32px;
+  z-index: 3;
+}
+.yt_wechat_push_table_page .content .table_zone .top_desc .legend > span {
+  margin-left: 30px;
+  position: relative;
+}
+.yt_wechat_push_table_page .content .table_zone .top_desc .legend > span::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: -20px;
+  top: 6px;
+  background: #ffecea;
+}
+.yt_wechat_push_table_page .content .table_zone .top_desc .legend > span:last-child::before {
+  background: #c6eede;
+}
+.yt_wechat_push_table_page .content .table_zone .table_content {
+  padding: 0 32px 15px;
+}
+.yt_wechat_push_table_page .content .table_zone .table_content .el-table__header-wrapper thead div {
+  background: #fff;
+}
+.yt_wechat_push_table_page .content .table_zone .table_content .el-table__body-wrapper {
+  z-index: 0;
+}
+.yt_wechat_push_table_page .content .table_zone .table_content .el-table::after,
+.yt_wechat_push_table_page .content .table_zone .table_content .el-table::before {
+  background: #fff;
+}
+.yt_wechat_push_table_page .content .table_zone .table_content .up {
+  background: #ffecea;
+}
+.yt_wechat_push_table_page .content .table_zone .table_content .down {
+  background: #c6eede;
+}
+.yt_wechat_push_table_page .content .table_zone .wechat_push_table {
+  font-size: 12px;
+}
+.yt_wechat_push_table_page .content .table_zone .wechat_push_table tr {
+  display: flex;
+  border-bottom: 1px solid #e2e2e2;
+}
+.yt_wechat_push_table_page .content .table_zone .wechat_push_table thead {
+  padding-bottom: 4px;
+  font-weight: bold;
+}
+.yt_wechat_push_table_page .content .table_zone .wechat_push_table td {
+  width: 60px;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.yt_wechat_push_table_page .content .table_zone .wechat_push_table .long {
+  width: 128px;
+}
+.yt_wechat_push_table_page .content .table_zone .wechat_push_table .short {
+  width: 60px !important;
+}
+.yt_wechat_push_table_page .content .table_zone .wechat_push_table .up {
+  background: #ffecea;
+}
+.yt_wechat_push_table_page .content .table_zone .wechat_push_table .down {
+  background: #c6eede;
+}
+.yt_wechat_push_table_page .noDataTips {
+  font-size: 16px;
+  margin-top: 40px;
+  color: #8c8c8c;
+  text-align: center;
+}
+
