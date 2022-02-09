@@ -16,6 +16,7 @@
   "dependencies": {
     "koa-ejs": "^4.3.0",
     "koa-static": "^5.0.0",
-    "koa-views": "^7.0.1"
+    "koa-views": "^7.0.1",
+    "pm2": "^5.1.2"
   }
 }
