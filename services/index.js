@@ -3,11 +3,12 @@
  * @Author: wujian
  * @Date: 2021-08-05 11:43:42
  * @LastEditors: wujian
- * @LastEditTime: 2022-02-10 14:46:34
+ * @LastEditTime: 2022-02-10 18:07:42
  */
 const path = require('path')
 const fs = require('fs')
 const { setRedis, getRedis } = require('../model/redies')
+const axios = require('axios')
 
 exports.home = async (ctx) => {
   ctx.status = 200
@@ -87,4 +88,10 @@ exports.saveData = async (ctx) => {
 exports.getData = async (ctx) => {
   const result = await getRedis('test')
   ctx.body = result
+}
+
+exports.catApi = async (ctx) => {
+  const url = ctx.url.replace('/api', 'http://m.maoyan.com')
+  const result = await axios.get(url)
+  ctx.body = result.data
 }
