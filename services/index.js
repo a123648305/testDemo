@@ -3,10 +3,11 @@
  * @Author: wujian
  * @Date: 2021-08-05 11:43:42
  * @LastEditors: wujian
- * @LastEditTime: 2021-09-13 14:55:59
+ * @LastEditTime: 2022-02-10 14:46:34
  */
 const path = require('path')
 const fs = require('fs')
+const { setRedis, getRedis } = require('../model/redies')
 
 exports.home = async (ctx) => {
   ctx.status = 200
@@ -75,5 +76,15 @@ exports.demo = async (ctx) => {
     'utf-8'
   ) // 同步执行
   console.log(result, '0')
+  ctx.body = result
+}
+
+exports.saveData = async (ctx) => {
+  await setRedis('test', new Date().getTime())
+  ctx.body = 'success'
+}
+
+exports.getData = async (ctx) => {
+  const result = await getRedis('test')
   ctx.body = result
 }

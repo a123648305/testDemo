@@ -20,6 +20,7 @@
     "koa-views": "^7.0.1",
     "koa2-connect": "^1.0.2",
     "koa2-proxy-middleware": "^0.0.4",
-    "pm2": "^5.1.2"
+    "pm2": "^5.1.2",
+    "redis": "^4.0.3"
   }
 }
