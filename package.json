@@ -14,9 +14,11 @@
     "koa-router": "^10.0.0"
   },
   "dependencies": {
+    "http-proxy-middleware": "^2.0.3",
     "koa-ejs": "^4.3.0",
     "koa-static": "^5.0.0",
     "koa-views": "^7.0.1",
+    "koa2-proxy-middleware": "^0.0.4",
     "pm2": "^5.1.2"
   }
 }
