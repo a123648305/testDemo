@@ -1,0 +1,342 @@
+.breadcumb-wrapper {
+  padding: 9px 24px;
+  color: #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+  min-height: 48px;
+  box-shadow: 0 6px 10px 0 rgba(226, 226, 226, 0.5);
+}
+.breadcumb-wrapper .breadcrumb-left > div {
+  display: flex;
+  margin-bottom: 12px;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span {
+  font-weight: 500;
+  color: #8c8c8c;
+  line-height: 20px;
+  cursor: pointer;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:hover {
+  color: #7262fd;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:nth-child(n + 2) {
+  margin-left: 5px;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:last-of-type {
+  cursor: default;
+  color: #8c8c8c;
+  display: inline-block;
+  max-width: 430px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.breadcumb-wrapper .breadcrumb-left > div .not_clickable {
+  cursor: default !important;
+}
+.breadcumb-wrapper .breadcrumb-left > div .not_clickable:hover {
+  color: #8c8c8c !important;
+}
+.breadcumb-wrapper .breadcrumb-left > span {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  display: inline-block;
+  max-width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.breadcumb-wrapper .normal-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.invitePeople .el-dialog--tiny {
+  width: 420px;
+}
+.invitePeople .el-form-item__content {
+  display: inline-block;
+  width: 280px;
+}
+.invitePeople .el-form-item__content .el-select {
+  width: 280px;
+}
+.invitePeople .el-form-item__content .multiSelect {
+  width: 280px;
+}
+.invitePeople .el-form-item:last-of-type {
+  margin-bottom: 0;
+}
+.invitePeople .el-form-item__label {
+  width: 68px;
+  display: inline-block;
+}
+.invitePeople .is-required label:before {
+  content: unset !important;
+}
+.invitePeople .is-required .el-form-item__content:after {
+  position: absolute;
+  content: '*';
+  color: #ff4949;
+  right: -22px;
+  top: 4px;
+  font-size: 22px;
+}
+
+.multiSelect {
+  height: 30px;
+  width: 200px;
+  line-height: normal;
+  position: relative;
+  display: inline-block;
+}
+.multiSelect .infor {
+  height: 34px;
+  width: 100%;
+  position: relative;
+  background: white;
+  box-sizing: border-box;
+  border: 1px solid #bfcbd9;
+  border-radius: 4px;
+  color: #1f2d3d;
+  transition: all 0.3s;
+  padding: 2px;
+}
+.multiSelect .infor:hover {
+  border: 1px solid #8391a5;
+}
+.multiSelect .infor .infor-content {
+  width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.multiSelect .infor .tags {
+  background: #f1f3f4;
+  padding-left: 12px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  color: #262626;
+  border: 1px solid #bfcbd9;
+  border-radius: 2px;
+}
+.multiSelect .infor span {
+  margin-right: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.multiSelect .infor span::after {
+  content: '\D7';
+  transition: all 0.3s;
+  opacity: 0;
+  padding-left: 2px;
+  font-size: 14px;
+}
+.multiSelect .infor span:hover {
+  color: #093b88;
+}
+.multiSelect .infor span:hover::after {
+  opacity: 1;
+}
+.multiSelect .infor a {
+  font-size: 14px;
+  cursor: default;
+  color: gray;
+  display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.multiSelect .infor i {
+  position: absolute;
+  right: 9px;
+  top: 8px;
+  color: #979797;
+  font-size: 12px;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: all 0.3s;
+}
+.multiSelect .infor i:hover {
+  color: #093b88;
+}
+.multiSelect .selItem {
+  position: absolute;
+  top: 42px;
+  border-radius: 2px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #dadada;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  z-index: 1;
+  max-height: 257px;
+  overflow-y: auto;
+}
+.multiSelect .selItem ul {
+  height: 100%;
+  width: 100%;
+  padding: 6px 0;
+  overflow-y: auto;
+}
+.multiSelect .selItem ul li {
+  height: 36px;
+  font-size: 14px;
+  color: #595959;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+.multiSelect .selItem ul li.disable {
+  pointer-events: none;
+  color: gray;
+}
+.multiSelect .selItem ul li.disable:hover {
+  background-color: white;
+}
+.multiSelect .selItem ul li span {
+  display: inline-block;
+  width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.multiSelect .selItem ul li i {
+  float: right;
+  display: none;
+}
+.multiSelect .selItem ul li.sel {
+  color: #20a0ff;
+}
+.multiSelect .selItem ul li.sel i {
+  display: block;
+}
+.multiSelect .selItem ul li:hover {
+  background-color: #e4e8f1;
+}
+.multiSelect .selItem ul .noData {
+  text-align: center;
+  color: gray;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.multiSelect .selItem::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.multiSelect .selItem::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(151, 168, 190, 0.3);
+}
+.multiSelect .selItem::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.user-container .wrap .navWrap {
+  padding: 20px 20px 0 20px;
+  width: 100%;
+}
+.user-container .wrap .navWrap .invitePeople {
+  float: right;
+}
+.user-container .wrap .navWrap .back-end-filter .back-search-select-wrap {
+  margin-bottom: 0;
+}
+.user-container .wrap .userList {
+  box-sizing: border-box;
+}
+.user-container .wrap .userList .user-info > img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 12px;
+  margin-top: 6px;
+}
+.user-container .wrap .userList .user-info > div {
+  max-width: calc(100% - 42px);
+  float: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.user-container .wrap .userList .user-info > div > p {
+  max-width: 100%;
+}
+.user-container .wrap .userList .user-info > div > div {
+  max-width: 100%;
+  color: #595959;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.user-container .wrap .userList .login-info {
+  max-width: calc(100%);
+}
+.user-container .wrap .userList .login-info p {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.user-container .wrap .userList .el-table__empty-block {
+  height: auto;
+}
+.drop-menu > li {
+  height: 30px;
+  line-height: 30px;
+  cursor: default;
+}
+.drop-menu > li:hover {
+  background: #e6f3fe;
+  color: #093B88;
+}
+.el-popover {
+  min-width: 100px;
+  padding: 8px 0;
+  height: auto;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #dadada;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 4px;
+  font-size: 14px;
+}
+.operate .el-dropdown-link {
+  font-size: 12px;
+  margin-right: 10px;
+  cursor: default;
+}
+.operate .el-dropdown-link:hover {
+  color: #093B88;
+}
+.operate .el-dropdown-link:hover i {
+  transform: rotate(-180deg);
+}
+.operate .el-dropdown-link i {
+  color: #bcbccb;
+  padding: 0 5px;
+  vertical-align: baseline;
+}
+

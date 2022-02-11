@@ -1,0 +1,182 @@
+.warning_list_view {
+  background: #f7f3f3;
+  padding: 8px 12px;
+  overflow: auto;
+}
+.warning_list_view .total_tips {
+  font-weight: 500;
+  color: #8c8c8c;
+  font-size: 12px;
+}
+.warning_list_view .list_item {
+  background-color: white;
+  padding: 12px;
+}
+.warning_list_view .list_item > div:nth-child(1) {
+  font-size: 14px;
+}
+.warning_list_view .list_item > div:nth-child(2) {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.warning_list_view .list_item > div:nth-child(2) .time {
+  font-size: 12px;
+  color: #bfbfbf;
+}
+.warning_list_view .list_item > div:nth-child(2) .tag {
+  color: white;
+  font-size: 10px;
+  border-radius: 2px;
+  padding: 2px 4px;
+  font-weight: bold;
+}
+.warning_list_view > .list_item:not(:first-child) {
+  margin-top: 8px;
+}
+.warning_list_view .clear {
+  font-size: 12px;
+  position: absolute;
+  background-color: white;
+  padding: 12px;
+  text-align: center;
+  color: #0847a6;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.yt_search_input_wrapper {
+  margin-right: 12px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  padding: 0 9px 0 12px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.yt_search_input_wrapper:hover {
+  border-color: #0847a6;
+}
+.yt_search_input_wrapper > input {
+  width: 66%;
+  height: 100%;
+  border: none;
+}
+.yt_search_input_wrapper > input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+.yt_search_input_wrapper i {
+  cursor: pointer;
+  color: #bfbfbf;
+}
+.yt_search_input_wrapper i:hover {
+  color: #0847a6;
+}
+.yt_search_input_wrapper i.icon-cem_log-off {
+  right: 31px;
+}
+.yt_search_input_wrapper i.icon-cem_log-off:hover {
+  color: #8c8c8c;
+}
+
+.warning_notic_list .top_tips {
+  color: white;
+  background: #d96969;
+  height: 32px;
+  flex: 0 0 32px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  font-weight: bold;
+}
+.warning_notic_list .top_tips i {
+  padding: 4px;
+}
+.warning_notic_list .search_com {
+  height: 32px;
+  width: 100%;
+  margin: 12px 0;
+  padding: 0 12px;
+  position: relative;
+}
+.warning_notic_list .search_com input {
+  width: 100%;
+  padding: 0 36px 0 32px;
+  background: #f2f2f2;
+}
+.warning_notic_list .search_com input:hover {
+  border-color: #f2f2f2;
+}
+.warning_notic_list .search_com .icon-cem_small-search {
+  left: 16px;
+  top: 50%;
+  width: 16px;
+  padding: 8px;
+  display: inline-block;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+.warning_notic_list .search_com .icon-cem_log-off {
+  right: 32px;
+  top: 50%;
+  width: 16px;
+  padding: 8px;
+  display: inline-block;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+.warning_notic_list .list_view {
+  flex: 1 1 0;
+  position: relative;
+}
+.warning_notic_list .list_view > .el-tabs .el-tabs__header {
+  border-bottom: unset;
+  margin: unset;
+  position: relative;
+  z-index: 10;
+}
+.warning_notic_list .list_view > .el-tabs .el-tabs__header .el-tabs__nav {
+  width: 100%;
+}
+.warning_notic_list .list_view > .el-tabs .el-tabs__header .el-tabs__nav .el-tabs__item {
+  color: #8c8c8c;
+  font-weight: bold;
+  width: 33.33%;
+  font-size: 14px;
+  text-align: center;
+}
+.warning_notic_list .list_view > .el-tabs .el-tabs__header .el-tabs__nav .el-tabs__item:hover {
+  color: #262626;
+}
+.warning_notic_list .list_view > .el-tabs .el-tabs__header .el-tabs__nav .el-tabs__active-bar {
+  width: 32px !important;
+  left: calc(16.66% - 16px);
+  background-color: #0847a6;
+  height: 2px;
+}
+.warning_notic_list .list_view > .el-tabs .el-tabs__header .el-tabs__nav .is-active {
+  color: #262626;
+}
+.warning_notic_list .list_view > .el-tabs .el-tabs__content {
+  height: calc(100% - 42px);
+  overflow: auto;
+}
+.warning_notic_list .list_view .pop {
+  position: absolute;
+  top: 8px;
+  left: calc(16.66% + 26px);
+  font-size: 11px;
+  border-radius: 40%;
+  background: #d96969;
+  color: white;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  padding: 0 4px;
+}
+

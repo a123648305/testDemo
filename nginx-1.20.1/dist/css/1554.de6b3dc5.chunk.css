@@ -1,0 +1,103 @@
+.secondary-header {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 24px;
+  color: #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 10px 0 rgba(226, 226, 226, 0.5);
+  position: relative;
+  z-index: 10;
+}
+.secondary-header .breadcrumb-style {
+  font-size: 16px;
+  font-weight: bold;
+}
+.secondary-header .breadcrumb-style .el-breadcrumb__separator::after {
+  content: '\E6CD';
+  color: #bfbfbf;
+  font-family: 'iconfont';
+  font-style: normal;
+  font-weight: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  margin: -2px;
+}
+.secondary-header .breadcrumb-style .el-breadcrumb__item__inner {
+  color: #8c8c8c !important;
+}
+.secondary-header .breadcrumb-style .el-breadcrumb__item__inner:hover {
+  color: #626262 !important;
+}
+.secondary-header .breadcrumb-style .el-breadcrumb__separator {
+  margin: 0 12px;
+}
+.secondary-header .breadcrumb-style .el-breadcrumb__item:last-child .el-breadcrumb__item__inner {
+  color: #262626 !important;
+}
+.secondary-header .normal-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.yt_account_login_wrapper .account_login_setting_wrap {
+  background-color: #f2f3f5;
+  padding: 12px;
+  color: #262626;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content {
+  background-color: #fff;
+  min-height: 851px;
+  padding: 24px 8px;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content > div {
+  display: flex;
+  margin-bottom: 30px;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content > div > span:first-of-type {
+  display: inline-block;
+  width: 157px;
+  color: #8c8c8c;
+  text-align: right;
+  margin-right: 20px;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content > div .radio_group .el-radio .el-radio__inner {
+  background: unset;
+  width: 14px;
+  height: 14px;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content > div .radio_group .el-radio .el-radio__inner::after {
+  background-color: #0847a6;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content > div .radio_group .el-radio > .is-checked + span {
+  color: #0748a6;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content > div .radio_group .el-radio > .is-checked .el-radio__inner {
+  border-color: #0847a6;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content > div .open_tips {
+  width: calc(100% - 286px);
+  line-height: 24px;
+  margin-top: 12px;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content > div .select_interval_wrap {
+  display: flex;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content > div .select_interval_wrap .el-select {
+  margin: -6px 8px;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content > div .select_interval_wrap .el-select .el-input__inner {
+  height: 32px;
+}
+.yt_account_login_wrapper .account_login_setting_wrap .account_login_content > div .select_interval_wrap .el-select .el-input__inner:hover {
+  border-color: #0847a6;
+}
+

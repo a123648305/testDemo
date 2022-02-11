@@ -1,0 +1,140 @@
+.breadcumb-wrapper {
+  padding: 9px 24px;
+  color: #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+  min-height: 48px;
+  box-shadow: 0 6px 10px 0 rgba(226, 226, 226, 0.5);
+}
+.breadcumb-wrapper .breadcrumb-left > div {
+  display: flex;
+  margin-bottom: 12px;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span {
+  font-weight: 500;
+  color: #8c8c8c;
+  line-height: 20px;
+  cursor: pointer;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:hover {
+  color: #7262fd;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:nth-child(n + 2) {
+  margin-left: 5px;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:last-of-type {
+  cursor: default;
+  color: #8c8c8c;
+  display: inline-block;
+  max-width: 430px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.breadcumb-wrapper .breadcrumb-left > div .not_clickable {
+  cursor: default !important;
+}
+.breadcumb-wrapper .breadcrumb-left > div .not_clickable:hover {
+  color: #8c8c8c !important;
+}
+.breadcumb-wrapper .breadcrumb-left > span {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  display: inline-block;
+  max-width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.breadcumb-wrapper .normal-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.flex-col .breadcumb-wrapper {
+  margin-bottom: 0;
+}
+.flex-col .topic {
+  padding: 12px;
+  background-color: #f2f3f5;
+}
+.flex-col .topic > div {
+  background: #fff;
+}
+.flex-col .topic > div .cem-table-wrap {
+  width: 100%;
+  padding: 24px 20px;
+  background-color: #fff;
+}
+.flex-col .topic .filter {
+  padding: 4px 24px 12px;
+  position: relative;
+}
+.flex-col .topic .filter button {
+  float: right;
+}
+.flex-col .topic .filter::after {
+  content: '';
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.flex-col .topic .el-dialog__body .dialog-title {
+  position: absolute;
+  top: 20px;
+  line-height: 1 !important;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2d3d;
+}
+.flex-col .topic .el-dialog__body .dialog-title i {
+  font-size: 20px;
+  margin-right: 8px;
+}
+.flex-col .topic .el-dialog__body .delete-tips {
+  line-height: 28px;
+}
+.flex-col .topic .el-dialog__body .form-item {
+  display: flex;
+}
+.flex-col .topic .el-dialog__body .form-item:first-of-type {
+  margin-bottom: 16px;
+}
+.flex-col .topic .el-dialog__body .form-item label {
+  min-width: 88px;
+  line-height: 36px;
+  height: 36px;
+}
+.flex-col .topic .el-dialog__body .form-item span {
+  line-height: 36px;
+}
+.flex-col .topic .el-dialog__body .form-item input {
+  height: 36px;
+}
+.flex-col .topic .sortable-row {
+  cursor: move;
+}
+.flex-col .topic .sortable-row .move_icon_container {
+  text-align: right;
+}
+.flex-col .topic .sortable-row .move_icon_container .icon-cem_move {
+  position: relative;
+  top: 1px;
+  margin-right: 4px;
+  font-size: 20px;
+  color: #d8d8d8;
+  visibility: hidden;
+}
+.flex-col .topic .sortable-row:hover .icon-cem_move {
+  visibility: visible;
+}
+

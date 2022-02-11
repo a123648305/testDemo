@@ -1,0 +1,196 @@
+.yt_warning_statistics_card {
+  height: 120px;
+  display: flex;
+}
+.yt_warning_statistics_card .card_item {
+  display: block;
+  flex: 1;
+  height: 100%;
+  background-color: #fff;
+  padding: 25px 0;
+  text-align: center;
+}
+.yt_warning_statistics_card .card_item:not(:last-child) {
+  margin-right: 16px;
+}
+.yt_warning_statistics_card .card_item h2 {
+  line-height: 44px;
+  font-size: 36px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 6px;
+}
+.yt_warning_statistics_card .card_item span {
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #8c8c8c;
+}
+
+.yt_warning_statistics_chart {
+  width: 100%;
+}
+.yt_warning_statistics_chart.workorder_chart {
+  height: 868px !important;
+}
+.yt_warning_statistics_chart .yt_chart_title_wrapper {
+  border-bottom: solid 1px #e5e5e5;
+  padding: 14px 20px;
+  height: 50px;
+}
+.yt_warning_statistics_chart .yt_chart_title_wrapper .chart_title_buttons {
+  position: absolute;
+  right: 48px;
+  bottom: -42px;
+}
+.yt_warning_statistics_chart .yt_chart_title_wrapper .chart_title_buttons .ant-radio-button-wrapper {
+  padding: 0;
+  width: 28px;
+  text-align: center;
+}
+.yt_warning_statistics_chart .yt_chart_title_wrapper .chart_title_buttons .ant-radio-button-wrapper .ant-radio-button .svg-button-wrapper > svg {
+  margin: 7px;
+  width: 12px;
+  height: 12px;
+}
+.yt_warning_statistics_chart .chart_title_buttons .icons {
+  display: flex;
+  align-items: center;
+}
+.yt_warning_statistics_chart .chart_title_buttons .icons .icon {
+  cursor: pointer;
+  color: #8c8c8c;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.yt_warning_statistics_chart .chart_title_buttons .icons .icon.active,
+.yt_warning_statistics_chart .chart_title_buttons .icons .icon:hover {
+  color: #7262fd;
+}
+.yt_warning_statistics_chart .chart_title_buttons .icons .icon:first-child {
+  margin-left: unset;
+}
+.yt_warning_statistics_chart .chart_title_buttons .icons .icon.disable {
+  cursor: unset;
+  pointer-events: none;
+  color: #bfbfbf;
+}
+.yt_warning_statistics_chart .chart_title_buttons .icons .icon i.active {
+  color: #7262fd;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger {
+  padding: unset;
+  background: unset;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger > i {
+  font-weight: 400;
+  color: #bfbfbf;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger > i.word_icon_hover {
+  color: #7262fd;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger:hover {
+  background: unset;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger:hover > i,
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger:hover .button-title {
+  color: #7262fd;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger .pre-title {
+  color: #8c8c8c !important;
+  font-weight: 400;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger > i,
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger .button-title {
+  font-weight: 400;
+  color: #262626;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger.sel {
+  background-color: unset;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger.sel:hover {
+  background-color: unset;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger.sel > i {
+  transform: rotate(0deg) !important;
+  color: #7262fd;
+  font-weight: 400;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-trigger.sel .button-title {
+  color: #7262fd;
+  font-weight: 400;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-panel {
+  font-weight: 500;
+  font-size: 12px;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-panel .panel-item {
+  width: 150px;
+  color: #8c8c8c;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-panel .panel-item span {
+  color: #262626;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-panel .panel-item .panel-item-icon {
+  margin-right: 12px;
+  font-size: 14px;
+  color: #8c8c8c;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-panel .panel-item.sel {
+  background-color: unset;
+  color: #7262fd;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-panel .panel-item.sel span {
+  color: #7262fd;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-panel .panel-item.sel .panel-item-icon {
+  color: #7262fd;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-panel .panel-item.sel .choice {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 12px;
+  height: 8px;
+  color: #7262fd;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper .button_content .button-panel .panel-item:hover {
+  background-color: #fafafa;
+}
+.yt_warning_statistics_chart .yt-warning-statistics-single-select-button-wrapper::after {
+  display: none;
+}
+
+.filter_quick_date_wrapper {
+  padding: 0 24px;
+}
+.filter_quick_date_wrapper .time {
+  margin-right: 16px;
+}
+.filter_quick_date_wrapper .filter_quick_date {
+  margin-left: 8px;
+}
+.filter_quick_date_wrapper .filter_quick_date.ant-picker-small {
+  padding: 2px 8px 2px 12px;
+}
+.filter_quick_date_wrapper .filter_quick_date .ant-picker-input::before {
+  content: '\E698';
+  color: #8c8c8c;
+  font-family: iconfont;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.yt_warning_statistics_wrapper {
+  padding: 16px 24px 24px;
+  height: 100%;
+  overflow: auto;
+  background-color: #f1f3f4;
+}
+.yt_warning_statistics_wrapper > div:not(:last-child) {
+  margin-bottom: 16px;
+}
+.yt_warning_statistics_wrapper .filter_quick_date_wrapper {
+  padding: 0;
+}
+

@@ -1,0 +1,162 @@
+.container {
+  height: auto;
+}
+.bottom-container .right-container .mainContent {
+  background: #fff;
+  color: #262626;
+}
+.flex-col .page-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  padding: 0 24px;
+  margin-bottom: 15px;
+}
+.flex-col .common-pad-24 .create-btn-wrap {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 24px;
+}
+.el-table__body .el-table__row .control {
+  color: #0052cc;
+}
+.team-info {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.team-info .info-name {
+  width: 62px;
+  color: #8c8c8c;
+  margin-right: 22px;
+}
+.team-info .team-name {
+  width: 355px;
+  color: #bfbfbf;
+}
+
+.breadcumb-wrapper {
+  padding: 9px 24px;
+  color: #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+  min-height: 48px;
+  box-shadow: 0 6px 10px 0 rgba(226, 226, 226, 0.5);
+}
+.breadcumb-wrapper .breadcrumb-left > div {
+  display: flex;
+  margin-bottom: 12px;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span {
+  font-weight: 500;
+  color: #8c8c8c;
+  line-height: 20px;
+  cursor: pointer;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:hover {
+  color: #7262fd;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:nth-child(n + 2) {
+  margin-left: 5px;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:last-of-type {
+  cursor: default;
+  color: #8c8c8c;
+  display: inline-block;
+  max-width: 430px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.breadcumb-wrapper .breadcrumb-left > div .not_clickable {
+  cursor: default !important;
+}
+.breadcumb-wrapper .breadcrumb-left > div .not_clickable:hover {
+  color: #8c8c8c !important;
+}
+.breadcumb-wrapper .breadcrumb-left > span {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  display: inline-block;
+  max-width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.breadcumb-wrapper .normal-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.confirm-model-wrap-main {
+  color: #262626;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+}
+.confirm-model-wrap-main .confirm-model {
+  min-width: 400px;
+  background: #fff;
+  padding: 20px 24px 24px 20px;
+  margin: 50px auto 40px;
+}
+.confirm-model-wrap-main .confirm-model .model-title {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  margin-bottom: 27px;
+}
+.confirm-model-wrap-main .confirm-model .model-content {
+  margin-bottom: 60px;
+}
+.confirm-model-wrap-main .confirm-model .option-btns {
+  display: flex;
+  justify-content: flex-end;
+}
+.confirm-model-wrap-main .confirm-model .option-btns button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.confirm-model-wrap-main .confirm-model .option-btns .option-btn {
+  width: 65px;
+  height: 32px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.confirm-model-wrap-main .confirm-model .option-btns .option-btn:hover {
+  opacity: 0.6;
+}
+.confirm-model-wrap-main .confirm-model .option-btns .confirm-btn {
+  color: #fff;
+  background: #0151ca;
+}
+.confirm-model-wrap-main .confirm-model .option-btns .cancel-btn {
+  color: #9b9b9b;
+  background: #eaece9;
+}
+.confirm-model-wrap-main .confirm-model .option-btns .option-btn ~ .option-btn {
+  margin-left: 16px;
+}
+.confirm-model-wrap-main .pic-wrap {
+  width: 132px;
+  margin: 0 auto;
+}
+.confirm-model-wrap-main .pic-wrap img {
+  width: 100%;
+}
+

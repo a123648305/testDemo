@@ -1,0 +1,161 @@
+.breadcumb-wrapper {
+  padding: 9px 24px;
+  color: #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+  min-height: 48px;
+  box-shadow: 0 6px 10px 0 rgba(226, 226, 226, 0.5);
+}
+.breadcumb-wrapper .breadcrumb-left > div {
+  display: flex;
+  margin-bottom: 12px;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span {
+  font-weight: 500;
+  color: #8c8c8c;
+  line-height: 20px;
+  cursor: pointer;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:hover {
+  color: #7262fd;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:nth-child(n + 2) {
+  margin-left: 5px;
+}
+.breadcumb-wrapper .breadcrumb-left > div:first-of-type > span:last-of-type {
+  cursor: default;
+  color: #8c8c8c;
+  display: inline-block;
+  max-width: 430px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.breadcumb-wrapper .breadcrumb-left > div .not_clickable {
+  cursor: default !important;
+}
+.breadcumb-wrapper .breadcrumb-left > div .not_clickable:hover {
+  color: #8c8c8c !important;
+}
+.breadcumb-wrapper .breadcrumb-left > span {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  display: inline-block;
+  max-width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.breadcumb-wrapper .normal-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.workOrder-detail-wrapper {
+  height: 100%;
+}
+.workOrder-detail-wrapper .breadcumb-wrapper {
+  margin-bottom: 0;
+}
+.workOrder-detail-wrapper .workOrder-detail-container {
+  height: calc(100% - 78px);
+  background-color: #f1f3f4;
+  padding: 16px 24px;
+  overflow-x: auto;
+  overflow-y: scroll;
+  overflow: auto scroll;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content {
+  width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 24px;
+  min-height: 100%;
+  display: flex;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .left {
+  background-color: #fafafa;
+  flex: 1;
+  margin-right: 16px;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .left .title {
+  text-align: center;
+  color: #8c8c8c;
+  margin-top: 26px;
+  margin-bottom: 36px;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .left .card {
+  width: 360px;
+  background-color: white;
+  padding: 16px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .left .card > div + div {
+  margin-top: 20px;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .left .card_number {
+  color: rgba(0, 0, 0, 0.85);
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .left .card_title {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 16px;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .left .card_item {
+  display: flex;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .left .card_item_tip {
+  color: #8c8c8c;
+  width: 132px;
+  margin-right: 24px;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .left .card_item_tip_center {
+  display: flex;
+  align-items: center;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .right {
+  border: 1px solid #e5e5e5;
+  flex: 1;
+  padding: 24px 16px;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .right .title {
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 24px;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .right ul:hover {
+  cursor: pointer;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .right .hoverPointer {
+  background-color: #f8f7ff;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .right ul li {
+  height: 45px;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .right ul li .name {
+  display: inline-block;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .right ul li i {
+  color: #8c8c8c;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .right ul li i:hover {
+  color: #7262fd;
+}
+.workOrder-detail-wrapper .workOrder-detail-container .workOrder-detail-content .right ul li .ant-checkbox-wrapper {
+  float: right;
+}
+

@@ -102,3 +102,14 @@
 2021/09/14 11:43:32 [notice] 13864#6404: signal process started
 2021/09/14 11:49:39 [notice] 20956#7104: signal process started
 2021/09/14 15:27:35 [notice] 7532#16084: signal process started
+2022/02/11 14:41:48 [notice] 12860#4492: signal process started
+2022/02/11 14:41:48 [error] 12860#4492: CreateFile() "D:\testPro\nginx-1.20.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2022/02/11 14:41:57 [notice] 7208#15136: signal process started
+2022/02/11 14:41:57 [error] 7208#15136: CreateFile() "D:\testPro\nginx-1.20.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2022/02/11 14:44:43 [notice] 15204#19436: signal process started
+2022/02/11 14:46:19 [notice] 9440#21520: signal process started
+2022/02/11 14:53:55 [notice] 13156#16512: signal process started
+2022/02/11 14:55:38 [notice] 18176#7304: signal process started
+2022/02/11 14:58:39 [notice] 17428#11744: signal process started
+2022/02/11 15:03:15 [notice] 19220#8140: signal process started
+2022/02/11 15:06:27 [notice] 4736#17440: signal process started

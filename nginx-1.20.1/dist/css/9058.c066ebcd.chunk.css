@@ -1,0 +1,443 @@
+.ant-pro-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.ant-pro-card-col {
+  width: 100%;
+}
+.ant-pro-card-border {
+  border: 1px solid #f0f0f0;
+}
+.ant-pro-card-hoverable {
+  cursor: pointer;
+  -webkit-transition: border-color 0.3s, -webkit-box-shadow 0.3s;
+  transition: border-color 0.3s, -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  transition: box-shadow 0.3s, border-color 0.3s, -webkit-box-shadow 0.3s;
+}
+.ant-pro-card-hoverable:hover {
+  border-color: transparent;
+  -webkit-box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+          box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+}
+.ant-pro-card-size-small .ant-pro-card-header {
+  padding: 8px 12px;
+  padding-bottom: 0;
+}
+.ant-pro-card-size-small .ant-pro-card-header-border {
+  padding-bottom: 8px;
+}
+.ant-pro-card-size-small .ant-pro-card-title {
+  font-size: 14px;
+}
+.ant-pro-card-size-small .ant-pro-card-body {
+  padding: 12px;
+}
+.ant-pro-card-ghost {
+  background-color: transparent;
+}
+.ant-pro-card-ghost > .ant-pro-card-header {
+  padding-right: 0;
+  padding-bottom: 16px;
+  padding-left: 0;
+}
+.ant-pro-card-ghost > .ant-pro-card-body {
+  padding: 0;
+  background-color: transparent;
+}
+.ant-pro-card-split > .ant-pro-card-body {
+  padding: 0;
+}
+.ant-pro-card-split-vertical {
+  border-right: 1px solid #f0f0f0;
+}
+.ant-pro-card-split-horizontal {
+  border-bottom: 1px solid #f0f0f0;
+}
+.ant-pro-card-contain-card > .ant-pro-card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ant-pro-card-body-direction-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.ant-pro-card-body-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.ant-pro-card-collapse > .ant-pro-card-header {
+  padding-bottom: 16px;
+  border-bottom: 0;
+}
+.ant-pro-card-collapse > .ant-pro-card-body {
+  display: none;
+}
+.ant-pro-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px 24px;
+  padding-bottom: 0;
+}
+.ant-pro-card-header-border {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.ant-pro-card-header-collapsible {
+  cursor: pointer;
+}
+.ant-pro-card-title {
+  font-size: 16px;
+}
+.ant-pro-card-type-inner .ant-pro-card-header {
+  background-color: #fafafa;
+}
+.ant-pro-card-collapsible-icon {
+  margin-right: 8px;
+  color: rgba(0, 0, 0, 0.75);
+}
+.ant-pro-card-collapsible-icon svg {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.ant-pro-card-title {
+  font-weight: 500;
+}
+.ant-pro-card-body {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  padding: 24px;
+}
+.ant-pro-card-body-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.ant-pro-card-col-0 {
+  display: none;
+}
+.ant-pro-card-col-24 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+}
+.ant-pro-card-col-23 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 95.83333333%;
+}
+.ant-pro-card-col-22 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 91.66666667%;
+}
+.ant-pro-card-col-21 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 87.5%;
+}
+.ant-pro-card-col-20 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 83.33333333%;
+}
+.ant-pro-card-col-19 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 79.16666667%;
+}
+.ant-pro-card-col-18 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 75%;
+}
+.ant-pro-card-col-17 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 70.83333333%;
+}
+.ant-pro-card-col-16 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 66.66666667%;
+}
+.ant-pro-card-col-15 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 62.5%;
+}
+.ant-pro-card-col-14 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 58.33333333%;
+}
+.ant-pro-card-col-13 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 54.16666667%;
+}
+.ant-pro-card-col-12 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 50%;
+}
+.ant-pro-card-col-11 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 45.83333333%;
+}
+.ant-pro-card-col-10 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 41.66666667%;
+}
+.ant-pro-card-col-9 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 37.5%;
+}
+.ant-pro-card-col-8 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 33.33333333%;
+}
+.ant-pro-card-col-7 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 29.16666667%;
+}
+.ant-pro-card-col-6 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 25%;
+}
+.ant-pro-card-col-5 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 20.83333333%;
+}
+.ant-pro-card-col-4 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 16.66666667%;
+}
+.ant-pro-card-col-3 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 12.5%;
+}
+.ant-pro-card-col-2 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 8.33333333%;
+}
+.ant-pro-card-col-1 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 4.16666667%;
+}
+
+.ant-pro-card-loading {
+  overflow: hidden;
+}
+.ant-pro-card-loading .ant-pro-card-body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.ant-pro-card-loading-content {
+  width: 100%;
+}
+.ant-pro-card-loading-content p {
+  margin: 0;
+}
+.ant-pro-card-loading-block {
+  height: 14px;
+  margin: 4px 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(207, 216, 220, 0.2)), color-stop(rgba(207, 216, 220, 0.4)), to(rgba(207, 216, 220, 0.2)));
+  background: linear-gradient(90deg, rgba(207, 216, 220, 0.2), rgba(207, 216, 220, 0.4), rgba(207, 216, 220, 0.2));
+  background-size: 600% 600%;
+  border-radius: 2px;
+  -webkit-animation: card-loading 1.4s ease infinite;
+          animation: card-loading 1.4s ease infinite;
+}
+@-webkit-keyframes card-loading {
+  0%,
+  100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes card-loading {
+  0%,
+  100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+.ant-pro-core-label-tip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ant-pro-core-label-tip-icon {
+  display: block;
+  margin-left: 4px;
+  cursor: pointer;
+}
+.ant-pro-core-label-tip-subtitle {
+  margin-left: 4px;
+  color: #626262;
+  font-weight: normal;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.ant-pro-card-actions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+}
+.ant-pro-card-actions::before {
+  display: table;
+  content: '';
+}
+.ant-pro-card-actions::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.ant-pro-card-actions > li {
+  float: left;
+  margin: 12px 0;
+  color: #626262;
+  text-align: center;
+}
+.ant-pro-card-actions > li > span {
+  position: relative;
+  display: block;
+  min-width: 32px;
+  font-size: 14px;
+  line-height: 1.5715;
+  cursor: pointer;
+}
+.ant-pro-card-actions > li > span:hover {
+  color: #7262fd;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.ant-pro-card-actions > li > span a:not(.ant-btn),
+.ant-pro-card-actions > li > span > .anticon {
+  display: inline-block;
+  width: 100%;
+  color: #626262;
+  line-height: 22px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.ant-pro-card-actions > li > span a:not(.ant-btn):hover,
+.ant-pro-card-actions > li > span > .anticon:hover {
+  color: #7262fd;
+}
+.ant-pro-card-actions > li > span > .anticon {
+  font-size: 16px;
+  line-height: 22px;
+}
+.ant-pro-card-actions > li:not(:last-child) {
+  border-right: 1px solid #f0f0f0;
+}
+
+.ant-pro-card-divider {
+  width: 1px;
+  margin: 24px 8px;
+  background-color: #f0f0f0;
+}
+.ant-pro-card-divider-horizontal {
+  width: auto;
+  width: initial;
+  height: 1px;
+  margin: 8px 24px;
+}
+.ant-pro-card-size-small .ant-pro-card-divider {
+  margin: 12px 8px;
+}
+.ant-pro-card-size-small .ant-pro-card-divider-horizontal {
+  margin: 8px 12px;
+}
+
+.ant-pro-card-tabs .ant-tabs-top > .ant-tabs-nav {
+  margin-bottom: 0;
+}
+.ant-pro-card-tabs .ant-tabs-top > .ant-tabs-nav .ant-tabs-nav-list {
+  margin-top: 8px;
+  padding-left: 16px;
+}
+.ant-pro-card-tabs .ant-tabs-bottom > .ant-tabs-nav {
+  margin-top: 0;
+}
+.ant-pro-card-tabs .ant-tabs-bottom > .ant-tabs-nav .ant-tabs-nav-list {
+  padding-left: 16px;
+}
+.ant-pro-card-tabs .ant-tabs-left .ant-tabs-content-holder .ant-tabs-content .ant-tabs-tabpane {
+  padding-left: 0;
+}
+.ant-pro-card-tabs .ant-tabs-left > .ant-tabs-nav {
+  margin-right: 0;
+}
+.ant-pro-card-tabs .ant-tabs-left > .ant-tabs-nav .ant-tabs-nav-list {
+  padding-top: 16px;
+}
+.ant-pro-card-tabs .ant-tabs-right .ant-tabs-content-holder .ant-tabs-content .ant-tabs-tabpane {
+  padding-right: 0;
+}
+.ant-pro-card-tabs .ant-tabs-right > .ant-tabs-nav .ant-tabs-nav-list {
+  padding-top: 16px;
+}
+

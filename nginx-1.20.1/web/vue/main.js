@@ -1,0 +1,1 @@
+import n from"./assets/main.20a07993.js?microAppEnv";function s(t){const e=document.createElement("link");return e.rel="stylesheet",e.href=t,e}n.styleInject=t=>{["./assets/style.03d5ee6f.css"].forEach(e=>{const r=s(new URL(e,import.meta.url));t.prepend(r)})};export default n;
