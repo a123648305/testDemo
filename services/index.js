@@ -3,12 +3,13 @@
  * @Author: wujian
  * @Date: 2021-08-05 11:43:42
  * @LastEditors: wujian
- * @LastEditTime: 2022-02-10 18:31:10
+ * @LastEditTime: 2022-02-14 15:44:20
  */
 const path = require('path')
 const fs = require('fs')
 const { setRedis, getRedis } = require('../model/redies')
 const { request } = require('../utils/request')
+const Mock = require('mockjs')
 
 exports.home = async (ctx) => {
   ctx.status = 200
@@ -37,13 +38,21 @@ exports.list = async (ctx) => {
   ctx.status = 200
   const result = await new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve([
-        { id: 0, name: 'test1' },
-        { id: 1, name: 'test2' },
-        { id: 2, name: 'test3' },
-        { id: 3, name: 'test4' },
-        { id: 4, name: 'test5' },
-      ])
+      resolve(
+        Mock.mock({
+          // 属性 list 的值是一个数组，其中含有 1 到 10 个元素
+          'list|1-10': [
+            {
+              // 属性 id 是一个自增数，起始值为 1，每次增 1
+              'id|+1': 1,
+              name: '@FIRST',
+              'age|1-100': 1,
+              address: '@CITY',
+              county: '@COUNTY',
+            },
+          ],
+        })
+      )
     }, 1500)
   })
   ctx.body = result
