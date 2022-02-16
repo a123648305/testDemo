@@ -3,7 +3,7 @@
  * @Author: wujian
  * @Date: 2021-09-10 10:19:10
  * @LastEditors: wujian
- * @LastEditTime: 2022-01-10 14:52:33
+ * @LastEditTime: 2022-02-15 17:41:25
  */
 import TagsDialog from '../../components/TagsDialog'
 import React, { useState, useRef } from 'react'
@@ -168,7 +168,7 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
         fetchSchemaList={() => {}}
       />
 
-      <EmotionTrend />
+      {/* <EmotionTrend loading={false} title={''} /> */}
 
       {/* <StarTable
         questionData={questionsData}
