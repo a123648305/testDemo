@@ -1,0 +1,32 @@
+.filter_check_group {
+  border: 1px solid red;
+  height: 200px;
+  .select_group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    .select_item {
+      display: inline-flex;
+      height: 28px;
+      padding: 4px 12px;
+      align-items: center;
+      cursor: pointer;
+      border: 1px solid transparent;
+      margin: 0 24px 10px;
+
+      font-weight: 400;
+      color: #262626;
+    }
+    .select_item_checked {
+      background: #f8f7ff;
+      border-color: #7262fd;
+      border-radius: 2px;
+    }
+    .select_item_disabled {
+      background: #f8f7ff;
+      border-color: #7262fd;
+      border-radius: 2px;
+      color: #eee;
+    }
+  }
+}
