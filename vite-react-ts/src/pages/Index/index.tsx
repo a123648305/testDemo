@@ -22,6 +22,9 @@ type PropsType = {}
 const Index: React.FC<PropsType> = ({ ...props }) => {
   const [visible, setVisible] = useState(false)
   const [val, setVal] = useState([])
+  const [val1, setVal1] = useState([])
+  const [val2, setVal2] = useState([])
+  const [val3, setVal3] = useState([])
   const [searchVal, setSearchVal] = useState()
 
   //   console.log(qq, '555')
@@ -95,9 +98,24 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
     },
   ]
 
-  const onChange = (val: any) => {
-    console.log(val, 'val')
-    setVal(val)
+  const onChange = (val: any, index: number) => {
+    console.log(val, 'val', index)
+    // switch (index) {
+    //   case 0:
+    //     setVal(val)
+    //     break
+    //   case 1:
+    //     setVal1(val)
+    //     break
+    //   case 2:
+    //     setVal2(val)
+    //     break
+    //   case 3:
+    //     setVal3(val)
+    //     break
+    //   default:
+    //     break
+    // }
   }
   console.log(data, 'matrxDatamatrxData')
 
@@ -117,7 +135,7 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
         options={data}
         value={val}
         searchVal={searchVal}
-        onChange={onChange}
+        onChange={(val) => onChange(val, 0)}
         onReset={() => {}}
       ></CheckBlock>
 
@@ -125,9 +143,9 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
       <CheckBlock
         type="MULTIPLE"
         options={data}
-        value={val}
+        value={val1}
         searchVal={searchVal}
-        onChange={onChange}
+        onChange={(val) => onChange(val, 1)}
         onReset={() => {}}
       ></CheckBlock>
 
@@ -135,9 +153,19 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
       <CheckBlock
         type="RANGE"
         options={data1}
-        value={val}
+        value={val2}
         searchVal={searchVal}
-        onChange={onChange}
+        onChange={(val) => onChange(val, 2)}
+        onReset={() => {}}
+      ></CheckBlock>
+
+      <span>input</span>
+      <CheckBlock
+        type="TEXT"
+        options={data1}
+        value={val3}
+        searchVal={searchVal}
+        onChange={(val) => onChange(val, 3)}
         onReset={() => {}}
       ></CheckBlock>
     </div>
