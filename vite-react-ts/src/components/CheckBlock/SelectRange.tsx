@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { InputNumber, Space } from 'antd'
 
 const list: Array<RangeListItem> = [
-  { id: 0, label: '全部' },
-  { id: 1, label: '大于' },
-  { id: 2, label: '小于' },
-  { id: 3, label: '介于' },
+  { value: 0, label: '全部' },
+  { value: 1, label: '大于' },
+  { value: 2, label: '小于' },
+  { value: 3, label: '介于' },
 ]
 
 const getCalcType = (value: RangeValueType): number => {
@@ -27,24 +27,23 @@ const SelectRange: React.FC<SelectPropTypes> = ({
   onChange,
 }) => {
   const [calcType, seTcalcType] = useState(getCalcType(value))
-  const [fistValue, setFirstVal] = useState<RangeValItemType>(
+  const [fistValue, setFirstVal] = useState<number | string | null>(
     value[0] || value[1] || null
   )
   const [lastValue, setLastVal] = useState<RangeValItemType>(value[1] || null)
   // 点击选项
   const onTaggle = (item: RangeListItem) => {
-    const { id } = item
-    if (id === calcType) return
-    seTcalcType(id)
+    const { value } = item
+    if (value === calcType) return
+    seTcalcType(value)
     // 0--[]  其他--[first,last]
-    const newCurentVal = id === 0 ? [] : [null, null]
+    const newCurentVal = value === 0 ? [] : [null, null]
     setFirstVal(null)
     setLastVal(null)
     onChange(newCurentVal)
   }
 
   const numberChange = (val: number | string, type: string) => {
-    console.log(val, type, 'val')
     let newCurentVal = []
     if (type === 'first') {
       // 1--大于  2--小于  3--介于
@@ -54,7 +53,6 @@ const SelectRange: React.FC<SelectPropTypes> = ({
       newCurentVal = [fistValue, val]
       setLastVal(val)
     }
-    console.log(newCurentVal, 'newCurentVal')
     onChange(newCurentVal)
   }
 
@@ -62,9 +60,9 @@ const SelectRange: React.FC<SelectPropTypes> = ({
     <ul className="select_group select_range">
       {list.map((item) => (
         <span
-          key={item.id}
+          key={item.value}
           className={`select_item ${
-            calcType === item.id && 'select_item_checked'
+            calcType === item.value && 'select_item_checked'
           }`}
           onClick={() => onTaggle(item)}
         >

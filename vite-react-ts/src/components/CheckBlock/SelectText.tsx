@@ -11,7 +11,7 @@ const SelectText: React.FC<SelectPropTypes> = ({
   const InputRef = useRef<Input>(null)
 
   const textChange = (e: any) => {
-    console.log(e.traget.value, 'val')
+    // console.log(e.traget.value, 'val')
   }
 
   const delKeyWords = (index: number) => {

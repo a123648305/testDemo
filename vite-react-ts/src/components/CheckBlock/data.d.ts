@@ -1,6 +1,6 @@
-declare type OptionItem = { id: string; label: string }
+declare type OptionItem = { value: string; label: string }
 
-declare type RangeListItem = { id: number; label: string }
+declare type RangeListItem = { value: number; label: string }
 
 declare type RangeValItemType = number | string | null
 

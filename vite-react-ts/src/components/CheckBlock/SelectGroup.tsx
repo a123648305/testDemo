@@ -12,44 +12,46 @@ const SelectGroup: React.FC<SelectPropTypes> = ({
     value.filter((k) => list.includes(k))
   )
   useEffect(() => {
-    const newVal = value.filter((k) => list.includes(k))
+    const newVal = value.filter((k) => list.find((d) => d.value === k))
     searchTotal ? setSearchChoosed(newVal) : setSearchChoosed([])
   }, [searchTotal])
 
   // 点击选项
   const onTaggle = (item: OptionItem) => {
-    console.log(item, 'item', total, value)
     let choosed = value
     if (type === 'SINGLE') {
-      choosed = [item.id]
+      choosed = [item.value]
     }
     if (type === 'MULTIPLE') {
-      if (value.includes(item.id)) {
-        choosed = value.filter((val) => val !== item.id)
+      if (value.includes(item.value)) {
+        choosed = value.filter((val) => val !== item.value)
+
+        // 搜索列表下 点击已选中 的切换状态
+        const newSearch = searchChoosed.filter(
+          (val: string) => val !== item.value
+        )
+        searchTotal && setSearchChoosed(newSearch)
       } else if (searchTotal && searchTotal < total) {
         // 查询出的数量小于总数量
-        choosed = [...value, item.id]
-        setSearchChoosed([...searchChoosed, item.id])
+        choosed = [...value, item.value]
+        const newSearch = searchChoosed.filter(
+          (val: string) => val !== item.value
+        )
+        setSearchChoosed([...newSearch, item.value])
       } else {
-        choosed = value.length + 1 === total ? [] : [...value, item.id]
+        choosed = value.length + 1 === total ? [] : [...value, item.value]
       }
     }
     onChange(choosed)
   }
-  console.log(
-    value,
-    searchChoosed,
-    'value',
-    searchTotal,
-    value.length === 0 || searchChoosed.length === searchTotal
-  )
   return (
     <ul className="select_group">
       {type === 'MULTIPLE' && (
         <span
           key="all"
           className={`select_item ${
-            (value.length === 0 || searchChoosed.length === searchTotal) &&
+            (value.length === 0 ||
+              (searchTotal && searchChoosed.length === searchTotal)) &&
             'select_item_checked'
           }`}
           onClick={() => onChange([])}
@@ -59,9 +61,9 @@ const SelectGroup: React.FC<SelectPropTypes> = ({
       )}
       {list.map((item) => (
         <span
-          key={item.id}
+          key={item.value}
           className={`select_item ${
-            value.includes(item.id) &&
+            value.includes(item.value) &&
             (!searchTotal || searchChoosed.length < searchTotal) &&
             'select_item_checked'
           }`}

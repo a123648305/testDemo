@@ -154,6 +154,7 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
         type="RANGE"
         value={val2}
         onChange={(val) => onChange(val, 2)}
+        suffixLabel="分"
         onReset={() => {}}
       ></CheckBlock>
 
