@@ -33,4 +33,95 @@
       color: #eee;
     }
   }
+  .select_text {
+    .ant-input-affix-wrapper {
+      float: left;
+      margin-right: 12px;
+      width: 242px;
+      height: 28px;
+      padding-right: 8px;
+    }
+    .select_text_list {
+      display: flex;
+      max-width: calc(100% - 12px - 314px);
+      overflow-y: hidden;
+      align-items: center;
+      user-select: none;
+      .word {
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+        height: 28px;
+        align-items: center;
+        border-radius: 4px;
+        padding: 0px 26px 0 10px;
+        transition: all 0.3s;
+        background: white;
+        border: 1px solid #e5e5e5;
+        color: #262626;
+        margin-right: 28px;
+        font-size: 12px;
+        > span {
+          display: inline-block;
+          max-width: 81px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        i {
+          position: absolute;
+          top: 3px;
+          right: 6px;
+          font-style: normal;
+          transition: all 0.3s;
+          cursor: pointer;
+          transform: scale(1.2);
+          color: #8c8c8c;
+          padding-right: 2px;
+        }
+        &:hover {
+          border-color: #7262fd;
+        }
+        &:last-of-type {
+          margin-right: 24px;
+        }
+      }
+      .word_blur {
+        &::after {
+          position: absolute;
+          content: '或';
+          left: -22px;
+          color: #262626;
+        }
+      }
+      .word_exact {
+        &::after {
+          position: absolute;
+          content: '且';
+          left: -22px;
+          color: #262626;
+        }
+      }
+      .close {
+        float: right;
+        margin-left: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s;
+        margin-top: 5px;
+        opacity: 0;
+        &:hover {
+          color: #0747a6;
+        }
+      }
+      &:hover {
+        .close {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .select_range {
+    display: flex;
+  }
 }

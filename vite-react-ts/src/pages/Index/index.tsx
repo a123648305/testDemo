@@ -25,7 +25,7 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
   const [val1, setVal1] = useState([])
   const [val2, setVal2] = useState([])
   const [val3, setVal3] = useState([])
-  const [searchVal, setSearchVal] = useState()
+  const [searchVal, setSearchVal] = useState('')
 
   //   console.log(qq, '555')
   const data = [
@@ -100,32 +100,32 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
 
   const onChange = (val: any, index: number) => {
     console.log(val, 'val', index)
-    // switch (index) {
-    //   case 0:
-    //     setVal(val)
-    //     break
-    //   case 1:
-    //     setVal1(val)
-    //     break
-    //   case 2:
-    //     setVal2(val)
-    //     break
-    //   case 3:
-    //     setVal3(val)
-    //     break
-    //   default:
-    //     break
-    // }
+    switch (index) {
+      case 0:
+        setVal(val)
+        break
+      case 1:
+        setVal1(val)
+        break
+      case 2:
+        setVal2(val)
+        break
+      case 3:
+        setVal3(val)
+        break
+      default:
+        break
+    }
   }
   console.log(data, 'matrxDatamatrxData')
 
   return (
     <div>
       <i className="iconfont icon-liebiao" />
-      <Button type="primary" onClick={() => setVisible(!visible)}>
+      <Button type="primary" onClick={() => setSearchVal('')}>
         show
       </Button>
-      <Button type="primary" onClick={() => batchRef.current.show()}>
+      <Button type="primary" onClick={() => setSearchVal('评论')}>
         upload
       </Button>
       <p></p>
@@ -152,9 +152,7 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
       <span>区间</span>
       <CheckBlock
         type="RANGE"
-        options={data1}
         value={val2}
-        searchVal={searchVal}
         onChange={(val) => onChange(val, 2)}
         onReset={() => {}}
       ></CheckBlock>
@@ -162,9 +160,7 @@ const Index: React.FC<PropsType> = ({ ...props }) => {
       <span>input</span>
       <CheckBlock
         type="TEXT"
-        options={data1}
         value={val3}
-        searchVal={searchVal}
         onChange={(val) => onChange(val, 3)}
         onReset={() => {}}
       ></CheckBlock>
