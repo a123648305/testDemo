@@ -7,12 +7,13 @@
  */
 import Home from '../pages/Index'
 import Detail from '../pages/detail'
+import Demo from '../pages/Demo'
 
 const routes = [
   {
     path: '/',
-    pathname: 'Home',
-    element: Home,
+    pathname: 'demo',
+    element: Demo,
     // indexRoute: { component: Home },
     childRoutes: [
       {

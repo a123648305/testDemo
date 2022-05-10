@@ -2,12 +2,13 @@
 import React, { useState, useRef } from 'react'
 import { Input, message } from 'antd'
 
-const SelectText: React.FC<SelectPropTypes> = ({
+const SelectText: React.FC<SelectTextPropTypes> = ({
   value = [],
   placeholder = '多个客户名称请按回车分隔',
+  keyWordsLength = 5,
   onChange,
 }) => {
-  const [keyWords, setKeyWords] = useState<any>(value)
+  const [keyWords, setKeyWords] = useState<CheckValueType>(value)
   const InputRef = useRef<Input>(null)
 
   const textChange = (e: any) => {
@@ -23,7 +24,7 @@ const SelectText: React.FC<SelectPropTypes> = ({
   }
 
   const addKeyWords = (e: any) => {
-    if (keyWords.length === 5) {
+    if (keyWords.length === keyWordsLength) {
       message.warning('最多搜索5个客户名称，超过的客户名称不搜索')
     } else {
       const val = e.target.value

@@ -14,29 +14,27 @@ const RenderSelect: { [key: string]: any } = {
 
 const CheckBlock: React.FC<PropTypes> = ({
   type,
-  maxCount = 100,
+  maxCount,
   searchVal,
   value,
   suffixLabel,
   placeholder,
-  options = [],
+  options,
+  keyWordsLength,
   onChange,
 }) => {
-  const list = searchVal
-    ? options
-        .filter((k) => new RegExp(searchVal).test(k.label))
-        .slice(0, maxCount + 1)
-    : options.slice(0, maxCount + 1)
+  console.log(options, maxCount, 'listlistlist', value)
 
   const childrenProps = {
     type,
     value,
-    list,
+    options,
     onChange,
-    total: options.length,
-    searchTotal: searchVal ? list.length : 0,
+    searchVal,
+    maxCount,
     suffixLabel,
     placeholder,
+    keyWordsLength,
   }
   return (
     <div className="filter_check_group">

@@ -10,6 +10,7 @@ import logo from '@/assets/resource/logo.svg'
 import './App.css'
 // import Index from '@/pages/Index/index.tsx'
 import Index from './pages/Index'
+import Demo from './pages/Demo'
 import { Button, Space } from 'antd'
 import { Routes, Route, Link } from 'react-router-dom'
 
@@ -35,7 +36,7 @@ function App() {
         <Link to="detail">to detail</Link>
       </Space>
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route path="/" element={<Demo />} />
         <Route path="detail" element={<Detail />} />
       </Routes>
     </div>

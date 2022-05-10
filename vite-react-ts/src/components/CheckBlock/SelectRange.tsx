@@ -21,7 +21,7 @@ const getCalcType = (value: RangeValueType): number => {
 }
 
 // 范围 选择
-const SelectRange: React.FC<SelectPropTypes> = ({
+const SelectRange: React.FC<SelectRangePropTypes> = ({
   value,
   suffixLabel,
   onChange,
