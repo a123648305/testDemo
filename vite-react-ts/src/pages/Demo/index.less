@@ -1,5 +1,76 @@
+@import url('./styles.less');
 .demo {
   .grid-layout {
     border: 1px solid red;
+    width: 100%;
+    height: 400px;
+    .react-grid-item {
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
+      &:not(.react-grid-placeholder) {
+        background: #ccc;
+        border: 1px solid black;
+      }
+      .resizing {
+        opacity: 0.9;
+      }
+      .static {
+        background: #cce;
+      }
+      .text {
+        //   font-size: 24px;
+        //   text-align: center;
+        //   position: absolute;
+        //   top: 0;
+        //   bottom: 0;
+        //   left: 0;
+        //   right: 0;
+        //   margin: auto;
+        //   height: 24px;
+        // }
+      }
+      .minMax {
+        font-size: 12px;
+      }
+      .add {
+        //   cursor: pointer;
+      }
+    }
+    .react-grid-dragHandleExample {
+      cursor: move; /* fallback if grab cursor is unsupported */
+      cursor: grab;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+    }
+
+    .toolbox {
+      background-color: #dfd;
+      width: 100%;
+      height: 120px;
+      overflow: scroll;
+    }
+
+    .hide-button {
+      cursor: pointer;
+      position: absolute;
+      font-size: 20px;
+      top: 0px;
+      right: 5px;
+    }
+
+    .droppable-element {
+      width: 150px;
+      text-align: center;
+      background: #fdd;
+      border: 1px solid black;
+      margin: 10px 0;
+      padding: 10px;
+    }
+  }
+  .grid-layout-dragging {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABhCAYAAABS4GZRAAAAAXNSR0IArs4c6QAAAj5JREFUeF7t3UFOwkAAQNH2JEr0IN5Mj+ZBNEi8BxhI2BCEPrUJqZ8NCfyZ1teJYbrpuN58Pg/DMGy323H/fvp6WN29nPv89LMlz3POZqrL+Lb+eN1jjcN4eP8p8Pt6c/FCTD2hW59nN+ye9kaPq/vD+7XXePyDpgJcm3Dp36tXwLgiAkYwzQNWMewDRjDNA1Yx7ANGMM0ZWA9QbwJnd282RfUlgYBnXh8BBzyzwMzTt4IDnllg5ulbwXMD6w/nmc/n5qdXr25X4iUNGME0D1jFsA8YwTQPWMWwDxjBNA9YxbBnYJy/HAXaySGY5gGrGPYBI5jmAasY9gEjmOYBqxj2ASOY5t2uRDHeaOgAPJ/F5erVCsYlEDCCaR6wimEfMIJpHrCKYR8wgmnOwHqAehNoJ2deXAfMZDYgYPPiOmAmswEBmxfXATOZDQjYvLjubhqS8UZDB+D5LC5Xr1YwLoGAEUzzgFUM+4ARTPOAVQz7gBFMcwbWA9SbQDs58+I6YCazAQGbF9cBM5kNCNi8uA6YyWxAwObFdXfTkIw3GjoAz2dxuXq1gnEJBIxgmgesYtgHjGCaB6xi2AeMYJozsB6g3gTayZkX1wEzmQ0I2Ly4DpjJbEDA5sV1wExmAwI2L667m4ZkvNHQAXg+i8vVqxWMSyBgBNM8YBXDnoGX/DTZvd1fPG33V0+lPV6R7y7k1Iep/rd5prr0Oxj/RWgesIphHzCCaR6wimEfMIJpHrCKYR8wgmkesIphHzCCaf4FalbRcWvKG1UAAAAASUVORK5CYII=');
+    background-position: 10px 10px;
+    background-size: 100px 80px;
   }
 }

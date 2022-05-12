@@ -1,0 +1,167 @@
+.filter_date_picker_wrapper {
+  position: relative;
+  min-width: 66px;
+  .filter_date_trigger {
+    padding: 2px 24px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 0.3s;
+    line-height: 22px;
+    cursor: pointer;
+    > span {
+      font-size: 12px;
+      > i {
+        font-size: 14px;
+        // vertical-align: middle;
+        vertical-align: baseline;
+      }
+    }
+    &:hover,
+    &:focus {
+      color: #7262fd;
+      border-color: #7262fd;
+    }
+  }
+  .time_picker_wrap {
+    // width: 640px;
+    position: absolute;
+    background-color: #fff;
+    top: 30px;
+    right: -1px;
+    border: 1px solid #e9e9e9;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.13);
+    z-index: 1000;
+    text-align: left;
+    .time_picker_content {
+      display: flex;
+      .right_picker {
+        height: 380px;
+        padding: 16px 24px;
+        .ant-picker-panel-container {
+          .ant-picker-panel-focused {
+            border: none;
+          }
+        }
+        .ant-checkbox-wrapper-checked {
+          .ant-checkbox-inner {
+            background-color: #7262fd;
+            border-color: #7262fd;
+          }
+        }
+      }
+      .left_time {
+        width: 223px;
+        height: 380px;
+        border-left: 1px solid #e5e5e5;
+        .quick_date_wrap {
+          width: 222px;
+          height: 100%;
+          padding-top: 24px;
+          padding-left: 24px;
+          & li {
+            width: 99px;
+            float: left;
+            margin-bottom: 18px;
+            cursor: pointer;
+            height: 18px;
+            list-style-type: none;
+            &.left_li {
+              float: left;
+            }
+            &.right_li {
+              float: right;
+            }
+            & span:first-child {
+              cursor: pointer;
+              margin-right: 6px;
+            }
+            & span:last-child {
+              span {
+                display: none;
+                color: #bfbfbf;
+                cursor: pointer;
+              }
+            }
+            .time_picker_star_tooltip {
+              display: none;
+              color: #bfbfbf;
+              &.star {
+                color: #7262fd;
+                display: inline-block;
+              }
+              &:hover {
+                color: #7262fd;
+              }
+            }
+            .active {
+              font-weight: bold;
+              color: #7262fd;
+            }
+            &:hover {
+              color: #7262fd;
+              .time_picker_star_tooltip {
+                display: inline-block;
+                > span {
+                  color: #7262fd;
+                }
+              }
+            }
+          }
+          // & li:last-child {
+          //   margin-left: 156px;
+          // }
+        }
+      }
+    }
+
+    .time_picker_footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      height: 42px;
+      border-top: 1px solid #e9e9e9;
+      padding: 8px 12px;
+      .el-button {
+        padding: 0;
+      }
+      > div {
+        > button {
+          width: 48px;
+          height: 26px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 12px;
+          &:first-of-type {
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+            background: #fff;
+            color: #626262;
+            &:hover,
+            &.active {
+              color: #5244d2;
+              border-color: #5244d2;
+            }
+          }
+          &:last-of-type {
+            border-radius: 4px;
+            background: #7262fd;
+            color: #fff;
+            &:hover,
+            &.active {
+              background: #5244d2;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.active {
+    .filter_date_trigger {
+      color: #7262fd;
+      border: 1px solid #7262fd;
+    }
+  }
+}
