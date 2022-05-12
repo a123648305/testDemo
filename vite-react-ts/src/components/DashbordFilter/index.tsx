@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Space } from 'antd'
-import DatePicker from '../DatePicker'
+import FilterDatePicker from '../DatePicker'
+import FilterSortCondition from '../FilterSortConditin'
 import './index.less'
 
 type PropsType = {
   title: string | React.ReactNode
+  screenList: Array<any>
   onFilter: (value: any) => void
   onExport: () => void
 }
@@ -21,9 +23,13 @@ const filterDateFilter = {
 
 const DashBoardFilter: React.FC<PropsType> = ({
   title,
+  screenList = [],
   onFilter,
   onExport,
 }) => {
+  const [conditionVisible, SetConditionVisible] = useState(false)
+  const [dateVisible, SetDateVisible] = useState(false)
+
   return (
     <div className="dashBord-filter-wrap">
       <div className="dashBord-header">
@@ -33,20 +39,20 @@ const DashBoardFilter: React.FC<PropsType> = ({
           <Space>
             <Button type="primary" onClick={() => onFilter(Math.random())}>
               <i className="iconfont icon-liebiao" />
-              <span>添加图表</span>
+              <span onClick={() => SetConditionVisible(true)}>添加图表</span>
             </Button>
             <Button type="default" onClick={() => onFilter(Math.random())}>
               <i className="iconfont icon-liebiao" />
-              <span>添加筛选</span>
+              <span onClick={() => SetDateVisible(true)}>添加筛选</span>
             </Button>
           </Space>
         </div>
         <div className="right-content">
           <Space>
-            <DatePicker
+            <FilterDatePicker
               // ref={(ref) => (this.timePicker = ref)}
               changeFilter={() => {}}
-              show={true}
+              show={dateVisible}
               onChange={() => {}}
               filterDateFilter={filterDateFilter}
               dateFilter={filterDateFilter}
@@ -57,7 +63,7 @@ const DashBoardFilter: React.FC<PropsType> = ({
                   2022/03/05 - 2022/04/05
                 </span>
               </Button>
-            </DatePicker>
+            </FilterDatePicker>
             <Button type="default" onClick={onExport}>
               导出
             </Button>
@@ -65,19 +71,18 @@ const DashBoardFilter: React.FC<PropsType> = ({
         </div>
       </div>
       <span className="dashBord-hr"></span>
-      <div className="dashBord-content">
-        sss
-        <div className="footer-button">
-          <Space>
-            <Button type="default" onClick={() => onFilter(Math.random())}>
-              取消
-            </Button>
-            <Button type="primary" onClick={() => onFilter(Math.random())}>
-              查询
-            </Button>
-          </Space>
-        </div>
-      </div>
+      <FilterSortCondition
+        visible={conditionVisible}
+        screenList={screenList}
+        onFilter={() => {
+          throw new Error('Function not implemented.')
+          SetConditionVisible(false)
+        }}
+        onCancel={() => {
+          SetConditionVisible(false)
+          throw new Error('Function not implemented.')
+        }}
+      />
     </div>
   )
 }

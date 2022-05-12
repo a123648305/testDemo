@@ -51,7 +51,7 @@ class NewDatePicker extends React.PureComponent {
     //   this.dateContentRef.style.right = '9999px';
     //   this.dateContentRef.style.top = '-9999px';
     // }
-    this.dateContentRef.style=dateContentStyle
+    //this.dateContentRef.style=dateContentStyle
 
   }
 
@@ -302,8 +302,7 @@ class NewDatePicker extends React.PureComponent {
   };
 
   render() {
-    const {  quickTime } = this.state;
-    const show='dat2e'
+    const {show,quickTime } = this.state;
     const {
       selectedDateRange,
       selectedQuickTimeChoice,
@@ -429,7 +428,7 @@ class NewDatePicker extends React.PureComponent {
           </div>
         )} */}
         {this.props.children}
-        <div className="time_picker_wrap" ref={ref => (this.dateContentRef = ref)}>
+        {show&&<div className="time_picker_wrap" ref={ref => (this.dateContentRef = ref)}>
           <div className="time_picker_content">
             {/* 左侧时间选择器 */}
             <div className="right_picker">
@@ -517,7 +516,7 @@ class NewDatePicker extends React.PureComponent {
               </Button>
             </div>
           </div>
-        </div>
+        </div>}
       </div>
     );
   }
