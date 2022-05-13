@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
-import { Button, Space } from 'antd'
+import { Button, Space, Modal } from 'antd'
 import FilterDatePicker from '../DatePicker'
 import FilterSortCondition from '../FilterSortConditin'
+import AddFilterModal from '../AddFilterModal'
 import './index.less'
 
 type PropsType = {
   title: string | React.ReactNode
   screenList: Array<any>
-  onFilter: (value: any) => void
-  onExport: () => void
+  onFilter: (filterList: any) => void
+  onExport: (filterList: any) => void
+  onSortList: (filterList: any) => void
+  onAddGraph: (payload: any) => void
 }
 
 const filterDateFilter = {
@@ -26,7 +29,11 @@ const DashBoardFilter: React.FC<PropsType> = ({
   screenList = [],
   onFilter,
   onExport,
+  onSortList,
+  onAddGraph,
 }) => {
+  const [addGraphVisible, setAddGraphVisible] = useState(false)
+  const [addFilterVisible, setAddFilterVisible] = useState(true)
   const [conditionVisible, SetConditionVisible] = useState(false)
   const [dateVisible, SetDateVisible] = useState(false)
 
@@ -35,7 +42,10 @@ const DashBoardFilter: React.FC<PropsType> = ({
       <div className="dashBord-header">
         <div className="left-content">
           <div className="title">{title}</div>
-          <i className="iconfont icon-liebiao" />
+          <i
+            className="iconfont icon-liebiao"
+            onClick={() => SetConditionVisible(true)}
+          />
           <Space>
             <Button type="primary" onClick={() => onFilter(Math.random())}>
               <i className="iconfont icon-liebiao" />
@@ -74,15 +84,31 @@ const DashBoardFilter: React.FC<PropsType> = ({
       <FilterSortCondition
         visible={conditionVisible}
         screenList={screenList}
-        onFilter={() => {
-          throw new Error('Function not implemented.')
+        onFilter={(filterList) => {
           SetConditionVisible(false)
+          onFilter(filterList)
         }}
         onCancel={() => {
           SetConditionVisible(false)
-          throw new Error('Function not implemented.')
         }}
+        onSortList={onSortList}
       />
+
+      <Modal
+        title="添加图表"
+        visible={addGraphVisible}
+        onOk={onAddGraph}
+        onCancel={() => setAddGraphVisible(false)}
+        footer={null}
+        wrapClassName="add-graph-modal"
+      >
+        <div className="add-graph-content">
+          <div className="add-graph-new">+ 新建图表</div>
+          <div className="add-graph-template">选择模板</div>
+        </div>
+      </Modal>
+
+      <AddFilterModal visible={addFilterVisible} />
     </div>
   )
 }

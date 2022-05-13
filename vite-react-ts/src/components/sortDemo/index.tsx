@@ -37,6 +37,8 @@ const SortDemo = () => {
           const oldItem = options[oldIndex]
           options.splice(oldIndex, 1) //删除要拖动的元素
           options.splice(newIndex, 0, oldItem)
+
+          console.log(options, 'options', newIndex, oldIndex)
         },
       })
   })

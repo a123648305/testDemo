@@ -4,6 +4,7 @@ import EchartDemo from '../../components/EchartDemo'
 import { Layout, ItemCallback } from 'react-grid-layout'
 import DashBoardFilter from '../../components/DashbordFilter'
 import './index.less'
+import SortDemo from '../../components/sortDemo'
 
 type PropsType = {
   data: Array<any> | undefined
@@ -59,23 +60,54 @@ const GridWrap: React.FC<any> = (props) => {
 const Demo: React.FC = () => {
   const layout = [
     { i: 'a', x: 0, y: 0, w: 4, h: 4, minW: 4, minH: 4 },
-    { i: 'b', x: 4, y: 4, w: 4, h: 4, minW: 4, minH: 4 },
-    { i: 'c', x: 4, y: 0, w: 4, h: 4, minW: 4, minH: 4 },
+    { i: 'b', x: 0, y: 0, w: 4, h: 4, minW: 4, minH: 4 },
+    { i: 'c', x: 0, y: 0, w: 4, h: 4, minW: 4, minH: 4 },
+  ]
+
+  const screenList = [
+    {
+      label: '日期',
+      value: '2012',
+      type: 'date',
+      id: 1,
+    },
+    {
+      label: '车型',
+      value: '2000',
+      type: 'select',
+      id: 2,
+    },
+    {
+      label: '车况',
+      value: '20',
+      id: 3,
+    },
   ]
   const onLayoutChange = (layout: any) => {
     console.log(layout, 'layoutChange')
   }
+
+  const onSortList = (list: any) => {
+    console.log('sortFilter', list)
+  }
+
+  const onFilter = (list: any) => {
+    console.log('filter', list)
+  }
+
   return (
     <>
       <DashBoardFilter
         title="仪表盘1"
-        onFilter={() => {}}
-        screenList={[]}
+        onFilter={onFilter}
+        screenList={screenList}
         onExport={function (): void {
           throw new Error('Function not implemented.')
         }}
+        onSortList={onSortList}
       />
       <GridWrap layout={layout} onLayoutChange={onLayoutChange} data={[]} />
+      <SortDemo />
     </>
   )
 }

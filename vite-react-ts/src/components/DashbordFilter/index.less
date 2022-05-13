@@ -55,3 +55,36 @@
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
   }
 }
+.add-graph-modal {
+  .ant-modal-header {
+    border-bottom: none;
+  }
+  .ant-modal-body {
+    padding: 0 16px 16px 16px;
+  }
+  .add-graph-content {
+    display: flex;
+    justify-content: space-around;
+    & > div {
+      width: 216px;
+      height: 140px;
+      border: 1px solid #e5e5e5;
+      border-radius: 2px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .add-graph-new {
+      color: #7262fd;
+    }
+    .add-graph-template {
+      color: #262626;
+    }
+  }
+}
