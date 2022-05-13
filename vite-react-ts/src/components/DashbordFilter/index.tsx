@@ -33,7 +33,7 @@ const DashBoardFilter: React.FC<PropsType> = ({
   onAddGraph,
 }) => {
   const [addGraphVisible, setAddGraphVisible] = useState(false)
-  const [addFilterVisible, setAddFilterVisible] = useState(true)
+  const [addFilterVisible, setAddFilterVisible] = useState(false)
   const [conditionVisible, SetConditionVisible] = useState(false)
   const [dateVisible, SetDateVisible] = useState(false)
 
@@ -47,13 +47,13 @@ const DashBoardFilter: React.FC<PropsType> = ({
             onClick={() => SetConditionVisible(true)}
           />
           <Space>
-            <Button type="primary" onClick={() => onFilter(Math.random())}>
+            <Button type="primary" onClick={() => setAddGraphVisible(true)}>
               <i className="iconfont icon-liebiao" />
-              <span onClick={() => SetConditionVisible(true)}>添加图表</span>
+              <span>添加图表</span>
             </Button>
-            <Button type="default" onClick={() => onFilter(Math.random())}>
+            <Button type="default" onClick={() => setAddFilterVisible(true)}>
               <i className="iconfont icon-liebiao" />
-              <span onClick={() => SetDateVisible(true)}>添加筛选</span>
+              <span>添加筛选</span>
             </Button>
           </Space>
         </div>
@@ -67,7 +67,7 @@ const DashBoardFilter: React.FC<PropsType> = ({
               filterDateFilter={filterDateFilter}
               dateFilter={filterDateFilter}
             >
-              <Button type="default" onClick={onExport}>
+              <Button type="default" onClick={() => SetDateVisible(true)}>
                 <i className="iconfont icon-liebiao" />
                 <span className="date-picker-lable">
                   2022/03/05 - 2022/04/05
@@ -108,7 +108,11 @@ const DashBoardFilter: React.FC<PropsType> = ({
         </div>
       </Modal>
 
-      <AddFilterModal visible={addFilterVisible} />
+      <AddFilterModal
+        visible={addFilterVisible}
+        onCancel={() => setAddFilterVisible(false)}
+        onOK={() => {}}
+      />
     </div>
   )
 }

@@ -27,7 +27,6 @@ const GridWrap: React.FC<any> = (props) => {
   return (
     <div className="demo">
       <h2>Demo</h2>
-
       <GridLayout
         className={
           isDraging ? 'grid-layout grid-layout-dragging' : 'grid-layout'
@@ -95,19 +94,21 @@ const Demo: React.FC = () => {
     console.log('filter', list)
   }
 
+  const onAddGraph = () => {}
+
+  const onExport = () => {}
+
   return (
     <>
       <DashBoardFilter
         title="仪表盘1"
         onFilter={onFilter}
         screenList={screenList}
-        onExport={function (): void {
-          throw new Error('Function not implemented.')
-        }}
+        onExport={onExport}
         onSortList={onSortList}
+        onAddGraph={onAddGraph}
       />
       <GridWrap layout={layout} onLayoutChange={onLayoutChange} data={[]} />
-      <SortDemo />
     </>
   )
 }

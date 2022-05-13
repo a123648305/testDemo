@@ -3,12 +3,9 @@ import { Modal, Form, Select } from 'antd'
 import './index.less'
 
 type PropsType = {
-  title: string | React.ReactNode
-  screenList: Array<any>
-  onFilter: (filterList: any) => void
-  onExport: (filterList: any) => void
-  onSortList: (filterList: any) => void
-  onAddGraph: (payload: any) => void
+  visible: boolean
+  onOK: (payload: any) => void
+  onCancel: () => void
 }
 
 const DateSelectType = [
@@ -34,7 +31,7 @@ const DateSelectType = [
   },
 ]
 
-const DashBoardFilter: React.FC<PropsType> = ({ onAddGraph }) => {
+const DashBoardFilter: React.FC<PropsType> = ({ visible, onCancel, onOK }) => {
   const [form] = Form.useForm()
 
   useEffect(() => {
@@ -49,6 +46,7 @@ const DashBoardFilter: React.FC<PropsType> = ({ onAddGraph }) => {
       .validateFields()
       .then((res) => {
         console.log(res, 'res')
+        onOK(res)
       })
       .catch((err) => console.log(err))
   }
@@ -56,9 +54,9 @@ const DashBoardFilter: React.FC<PropsType> = ({ onAddGraph }) => {
   return (
     <Modal
       title="添加筛选"
-      visible={true}
+      visible={visible}
       onOk={() => onSumbit()}
-      onCancel={() => {}}
+      onCancel={onCancel}
       wrapClassName="add-filter-modal"
       width={480}
       okText="确定"
