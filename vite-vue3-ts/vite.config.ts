@@ -1,14 +1,28 @@
-/*
- * @Description:
- * @Author: wujian
- * @Date: 2021-09-01 15:08:37
- * @LastEditors: wujian
- * @LastEditTime: 2021-09-06 11:49:26
- */
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import components from 'unplugin-vue-components/vite'
+import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
+const path = require('path')
 
-import path from 'path'
-
-const defineConfig = {
+// https://vitejs.dev/config/
+export default defineConfig({
+  //   root: '',
+  // base: '/', // 开发或生产环境服务的公共基础路径。
+  mode: 'development', // 'development'（开发模式），'production'（生产模式）
+  plugins: [
+    vue(),
+    components({
+      resolvers: [VarletUIResolver()],
+    }),
+  ],
+  css: {
+    preprocessorOptions: {
+      less: {
+        // 支持内联 JavaScript
+        javascriptEnabled: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
@@ -16,7 +30,7 @@ const defineConfig = {
   },
   server: {
     host: '0.0.0.0',
-    port: 2021,
+    port: 2022,
     open: false,
     proxy: {
       '/api': {
@@ -26,6 +40,4 @@ const defineConfig = {
       },
     },
   },
-}
-
-export default defineConfig
+})
