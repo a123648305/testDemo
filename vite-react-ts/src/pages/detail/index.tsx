@@ -5,18 +5,35 @@
  * @LastEditors: wujian
  * @LastEditTime: 2021-10-23 11:56:10
  */
-import React, { useEffect, useState } from 'react'
-import { Button, Layout, Rate } from 'antd'
-import './index.less'
+import React, { useEffect, useState } from "react";
+import { Button, Layout, Rate } from "antd";
+import { useHistory, useLocation } from "react-router-dom";
+import { useRouter } from "next/router";
+import "./index.less";
 
-type PorpsType = {}
-const { Sider, Content } = Layout
+type PorpsType = {};
+const { Sider, Content } = Layout;
 const CustomDetail: React.FC<PorpsType> = () => {
+  const route = useLocation();
+  const routers = useHistory();
+  console.log(route, routers, "fd");
+
+  const jumo = () => {
+    routers.push({
+      pathname: "/index",
+      // query: ,
+      search: "{ id: 3 }",
+      state: { ids: 50 },
+    });
+  };
+
   return (
     <Layout className="customer_detail">
       <Sider className="customer_detail_left" width="400">
         <div className="customer_header">
-          <Button className="reback_btn">返回</Button>
+          <Button className="reback_btn" onClick={() => jumo()}>
+            返回
+          </Button>
           <div className="customer_headImg">
             <img
               src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202107%2F09%2F20210709210621_bcea1.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637551060&t=ecba3b03b8b5052a12b78007be0f69e5"
@@ -84,7 +101,7 @@ const CustomDetail: React.FC<PorpsType> = () => {
         </section>
       </Content>
     </Layout>
-  )
-}
+  );
+};
 
-export default CustomDetail
+export default CustomDetail;

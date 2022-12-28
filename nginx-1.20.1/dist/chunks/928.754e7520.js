@@ -1,1 +1,0 @@
-(self.webpackChunkyunting=self.webpackChunkyunting||[]).push([[928],{10928:n=>{n.exports=function(n){var u=null==n?0:n.length;return u?n[u-1]:void 0}}}]);

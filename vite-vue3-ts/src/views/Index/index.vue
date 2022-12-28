@@ -11,11 +11,10 @@
 
 <script lang="ts">
 import useStore from "@/store/test";
-import Vue from "vue";
-export default Vue.extend({
+export default {
   setup() {
     const { count } = useStore();
     return { count };
   },
-});
+};
 </script>

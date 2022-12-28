@@ -5,37 +5,28 @@
  * @LastEditors: wujian
  * @LastEditTime: 2021-11-16 15:46:38
  */
-import Home from '../pages/Index'
-import Detail from '../pages/detail'
-import Demo from '../pages/Demo'
+
+import Home from "../pages/Index";
+import Detail from "../pages/detail";
+import Demo from "../pages/Demo";
 
 const routes = [
   {
-    path: '/',
-    pathname: 'demo',
-    element: Demo,
-    // indexRoute: { component: Home },
-    childRoutes: [
+    path: "/",
+    component: Demo,
+    exact: true,
+    routes: [
       {
-        path: '/index',
-        pathname: 'index',
-        element: Home,
+        path: "/index",
+        pathname: "index",
+        component: Demo,
       },
       {
-        path: '/messages/:id',
-        pathname: 'Detail',
-        element: Detail,
-        // childRoutes: [
-        //   { path: '/messages/:id', component: Message },
-        //   {
-        //     path: 'messages/:id',
-        //     onEnter: function (nextState, replaceState) {
-        //       replaceState(null, '/messages/' + nextState.params.id)
-        //     },
-        //   },
-        // ],
+        path: "/detail",
+        pathname: "Detail",
+        component: Detail,
       },
     ],
   },
-]
-export default routes
+];
+export default routes;

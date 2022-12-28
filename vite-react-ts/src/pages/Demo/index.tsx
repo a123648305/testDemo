@@ -1,82 +1,184 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
-import EchartDemo from '../../components/EchartDemo'
-import DashBoardFilter from '../../components/DashbordFilter'
-import MultiSelect from '../../components/MultiSelect'
+import React, {
+  useCallback,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import EchartDemo from "../../components/EchartDemo";
+import DashBoardFilter from "../../components/DashbordFilter";
+import MultiSelect from "../../components/MultiSelect";
 import {
   ItemCallback,
   Layout,
   Responsive,
   WidthProvider,
-} from 'react-grid-layout'
-import './index.less'
-import { Button, Select } from 'antd'
-const ResponsiveReactGridLayout = WidthProvider(Responsive)
+} from "react-grid-layout";
+import "./index.less";
+import { Button, Select } from "antd";
+import { asyncPool } from "./dd";
+import axios from "axios";
+// import { asyncPool, fetchQueT } from "./dd";
+import { debounce } from "loadsh";
+import { resolve } from "path";
+
+const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 type PropsType = {
-  data: Array<any> | undefined
-  layout: Layout
-  vertical: boolean
-  onDragStart?: ItemCallback
-  onDragEnd?: ItemCallback
-  onLayoutChange: (layout: Layout) => void
-}
+  data: Array<any> | undefined;
+  layout: Layout;
+  vertical: boolean;
+  onDragStart?: ItemCallback;
+  onDragEnd?: ItemCallback;
+  onLayoutChange: (layout: Layout) => void;
+};
 
 const GridWrap: React.FC<any> = (props) => {
-  const { layout, data, onLayoutChange, list } = props
-  const gridRef = useRef<HTMLDivElement>(null)
+  const { layout, data, onLayoutChange, list } = props;
+  const gridRef = useRef<HTMLDivElement>(null);
+  const reqList = useRef(new Map());
+  const isFetching = useRef(false);
+  const count = useRef(0);
   useLayoutEffect(() => {
-    console.log(gridRef, 'cc')
-  }, [])
+    console.log(gridRef, "cc");
+    // reqList.current = new fetchQueT();
+  }, []);
 
-  const [val, setVal] = useState(['12', '20'])
-  const [selectList, setSelectList] = useState([])
-  const options = [
-    {
-      id: '699e2ba04ccd4c5ca9a8f3f04ec22418',
-      name: '项目管理员',
-    },
-    {
-      id: 'aa5bc7b22c224b4f9f13eb8109b35c0c',
-      name: '项目成员',
-    },
-    {
-      id: 'f88b4891aef147eda57fb2039581ce6b',
-      name: '新问卷调研权限',
-    },
-    {
-      id: 'e834585e188b473b8d211d5c016c5e93',
-      name: '咕咕咕咕细细细细细',
-    },
-    {
-      id: '26da439f051d48c4987a1a79b5b772ca',
-      name: '无话题分析',
-    },
-    {
-      id: '4e6fe6acbfa84e40b675439206d724e8',
-      name: '查看问卷消息页面信息',
-    },
-    {
-      id: 'f1ffa2ecd96c481ea0bae2fd24ba5f18',
-      name: '1233456',
-    },
-    {
-      id: 'f79d92c180c8454db02e57e9878f1449',
-      name: '111111',
-    },
-    {
-      id: '7aba06f9716a4c179504f62c6c966617',
-      name: '仅工作台待办-没有预警和工单',
-    },
-    {
-      id: 'ae5d0b1f2e264c27892d1f30e3ea2ae7',
-      name: '项目设置-数据链接',
-    },
-  ]
+  const fetchTest = async (arr, id: string, callback) => {
+    console.log("test");
+    try {
+      // console.time("100-elements");
+      const timeout = (id) => axios.get("/api/tql", { params: { id } });
+      for await (const res of asyncPool(1, [...arr.keys()], timeout)) {
+        console.log(res, "res");
+        arr.get(res.data.id)(res);
+      }
+      // console.timeEnd("100-elements");
+    } catch (error) {
+      console.log(error, "eeeeee");
+    }
+  };
+  const queue = [];
+
+  const promiseQueue = (list) => {
+    let seq = Promise.resolve();
+    console.log(list, "llls");
+    queue.forEach((item) => {
+      seq = seq.then(item);
+    });
+    return seq;
+  };
+
+  const delay = (() => {
+    let timer = 0;
+    return function (callback, ms) {
+      clearTimeout(timer);
+      timer = setTimeout(() => callback, ms);
+    };
+  })();
+
+  const fetchData = async (id: any) => {
+    // return new Promise(async (resolve, reject) => {
+    //   console.log("5");
+    const arr = reqList.current;
+
+    //   // return debounce(fetchTest(id), 4000);
+    //   count.current += 1;
+    //   isFetching.current = true;
+    //   console.log(count.current, 9999);
+    //   const res = await fetchTest(id);
+    //   resolve(res);
+    // });
+    const fn = () => axios.get("/api/tql", { params: { id } });
+
+    // *function fx(){
+    //   debounce(() => {
+    //     queue.push(fn);
+    //     console.log("xq", queue);
+    //   }, 800)();
+    // };
+    // await fx();
+
+    // return new Promise(async (resolve, reject) => {
+    //   console.log(queue, "q");
+    //   queue[queue.length - 2].then((res) => resolve(res));
+    //   promiseQueue(queue).then((res) => resolve(res));
+    // });
+
+    // //delay(() => promiseQueue(queue), 300);
+    // return promiseQueue(queue);
+    // return new Promise(async (resolve, reject) => {
+    //   const fn = () => axios.get("/api/tql", { params: { id } });
+    //   for await (const res of asyncPool(1, [id], fn)) {
+    //     console.log(res, "res", id);
+    //     if (res.data.id === id) {
+    //       resolve(res);
+    //     }
+    //   }
+    // });
+
+    // const res = reqList.current.addPromise(fn);
+    // console.log(res.next(), "res");
+  };
+
+  async function* testD(id) {
+    // const fn = () =>
+    //   axios.get("/api/tql", { params: { id } }).then((res) => {
+    //     console.log("ccc", res);
+    //     return res;
+    //   });
+    // yield await fn();
+    const result = await req(id);
+    console.log(result, 999);
+    yield result;
+    // return "result";
+  }
+
+  const qs = async (id) => {
+    const result = await testD.next(id);
+    console.log(result);
+    // (result);
+    return result;
+  };
+
+  // const it = useMemo((id: any) => testD(id), []);
+
+  async function* testFetch(id) {
+    console.log("loading---", id);
+    // const req = (id) => axios.get("/api/tql", { params: { id } });
+    const result = await axios.get("/api/tql", { params: { id } });
+    console.log(result, "over---");
+    yield result;
+    // return result;
+  }
+  const fs = useCallback(
+    debounce((id, arr) => {
+      console.log(id, "debounce", arr);
+      fetchTest(arr, id);
+    }, 1000),
+    []
+  );
+
+  const getData = (id) => {
+    console.log(id, "id");
+    return new Promise((resolve, reject) => {
+      const fn = () => axios.get("/api/tql", { params: { id } });
+      const arr = reqList.current;
+      if (!arr.has(id)) {
+        arr.set(id, (res) => resolve(res));
+      }
+      fs(id, arr);
+      console.log(id, "iiiloading", arr);
+    });
+  };
 
   return (
     <div className="demo">
       <h2>Demo</h2>
 
+      <Button onClick={() => fetchTest()}>request</Button>
+      {/* <Button onClick={() => testD()}>test</Button> */}
+      {/* 
       <Select
         style={{ marginLeft: 100, width: 220 }}
         mode="multiple"
@@ -94,7 +196,7 @@ const GridWrap: React.FC<any> = (props) => {
           />
         )}
         defaultValue={val}
-      ></Select>
+      ></Select> */}
 
       <ResponsiveReactGridLayout
         className="grid-layout grid-layout-dragging"
@@ -106,62 +208,118 @@ const GridWrap: React.FC<any> = (props) => {
         useCSSTransforms={true}
       >
         {list.map((item: any) => (
-          <div key={item.i} style={{ width: 300 }}>
-            <EchartDemo loading={false} title={item.i} />
+          <div key={item.i}>
+            <EchartDemo
+              title={item.i}
+              // fetchData={(id) => {
+              //   testFetch(id).next();
+              // }}
+              fetchData={getData}
+              id={item.i}
+            />
           </div>
         ))}
       </ResponsiveReactGridLayout>
     </div>
-  )
-}
+  );
+};
 
 const Demo: React.FC = () => {
   const layout = {
-    lg: [
-      { i: 'a', x: 0, y: 0, w: 4, h: 4, minW: 4, minH: 4 },
-      { i: 'b', x: 0, y: 0, w: 3, h: 4, minW: 4, minH: 4 },
-      { i: 'c', x: 0, y: 0, w: 4, h: 4, minW: 4, minH: 4 },
-    ],
-  }
+    lg: [],
+  };
   const [list, setList] = useState([
-    { i: 'a', x: 0, y: 0, w: 8, h: 10, minW: 4, minH: 4 },
-    { i: 'b', x: 0, y: 0, w: 6, h: 4, minW: 4, minH: 4 },
-    { i: 'c', x: 0, y: 0, w: 4, h: 4, minW: 4, minH: 4 },
-  ])
+    {
+      i: "a",
+      x: 0,
+      y: 1,
+      w: 4,
+      h: 4,
+    },
+    {
+      i: "b",
+      x: 1,
+      y: 0,
+      w: 4,
+      h: 4,
+    },
+    {
+      i: "c",
+      x: 2,
+      y: 1,
+      w: 4,
+      h: 4,
+    },
+    {
+      i: "d",
+      x: 3,
+      y: 1,
+      w: 4,
+      h: 4,
+    },
+    // {
+    //   i: "aq",
+    //   x: 4,
+    //   y: 1,
+    //   w: 4,
+    //   h: 4,
+    // },
+    // {
+    //   i: "bq",
+    //   x: 0,
+    //   y: 0,
+    //   w: 4,
+    //   h: 4,
+    // },
+    // {
+    //   i: "cq",
+    //   x: 0,
+    //   y: 0,
+    //   w: 4,
+    //   h: 4,
+    // },
+    // {
+    //   i: "dq",
+    //   x: 0,
+    //   y: 0,
+    //   w: 4,
+    //   h: 4,
+    // },
+  ]);
   const screenList = [
     {
-      label: '日期',
-      value: '2012',
-      type: 'date',
+      label: "日期",
+      value: "2012",
+      type: "date",
       id: 1,
     },
     {
-      label: '车型',
-      value: '2000',
-      type: 'select',
+      label: "车型",
+      value: "2000",
+      type: "select",
       id: 2,
     },
     {
-      label: '车况',
-      value: '20',
+      label: "车况",
+      value: "20",
       id: 3,
     },
-  ]
+  ];
   const onLayoutChange = (layout: any) => {
-    console.log(layout, 'layoutChange')
-  }
+    console.log(layout, "layoutChange");
+  };
 
   const onSortList = (list: any) => {
-    console.log('sortFilter', list)
-  }
+    console.log("sortFilter", list);
+  };
 
   const onFilter = (list: any) => {
-    console.log('filter', list)
-  }
+    console.log("filter", list);
+  };
 
-  const onAddGraph = () => {}
+  const onAddGraph = () => {};
 
-  const onExport = () => {}
+  const onExport = () => {};
 
   return (
     <>
@@ -179,7 +337,7 @@ const Demo: React.FC = () => {
           setList([
             ...list,
             {
-              i: Math.random() * 1000 + '',
+              i: Math.random() * 1000 + "",
               x: 0,
               y: 0,
               w: 4,
@@ -194,7 +352,7 @@ const Demo: React.FC = () => {
       </Button>
       <GridWrap layout={layout} onLayoutChange={onLayoutChange} list={list} />
     </>
-  )
-}
+  );
+};
 
-export default Demo
+export default Demo;
