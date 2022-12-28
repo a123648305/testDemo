@@ -19,10 +19,10 @@ export default defineConfig({
     reactRefresh(),
     vitePluginImport({
       libList: [
-        {
-          libName: "antd",
-          style: (name: any) => `antd/es/${name}/style/css.js`,
-        },
+        // {
+        //   libName: "antd",
+        //   style: (name: any) => `antd/es/${name}/style/css.js`,
+        // },
         {
           libName: "element-plus",
           style: (name: string) => {

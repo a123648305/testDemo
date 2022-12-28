@@ -1,10 +1,4 @@
-/*
- * @Description:
- * @Author: wujian
- * @Date: 2021-12-16 09:31:56
- * @LastEditors: wujian
- * @LastEditTime: 2021-12-16 10:17:47
- */
+
    
 //矩阵单选题
   {

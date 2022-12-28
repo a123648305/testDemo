@@ -1,10 +1,3 @@
-/*
- * @Description:
- * @Author: wujian
- * @Date: 2021-09-09 17:26:11
- * @LastEditors: wujian
- * @LastEditTime: 2021-11-16 15:22:29
- */
 import React, { useCallback, useEffect, useState } from "react";
 import logo from "@/assets/resource/logo.svg";
 import axios from "axios";
@@ -14,13 +7,7 @@ import Index from "./pages/Index";
 import Demo from "./pages/Demo/index2";
 import { Button, Menu, Space } from "antd";
 import routes from "./router";
-import {
-  BrowserRouter as Routes,
-  Router,
-  Link,
-  useHistory,
-} from "react-router-dom";
-import { renderRoutes } from "react-router-config";
+import { BrowserRouter as Routes, Router, Link } from "react-router-dom";
 
 import Detail from "./pages/detail";
 
@@ -39,7 +26,6 @@ const items = [
 function App() {
   const [count, setCount] = useState(0);
   const [time, setTime] = useState("");
-  const ussr = useHistory();
   useEffect(() => {
     // timeStart()
   }, []);
@@ -75,7 +61,6 @@ function App() {
           style={{ width: "500px" }}
         />
       </header>
-      {renderRoutes(routes)}
     </div>
   );
 }

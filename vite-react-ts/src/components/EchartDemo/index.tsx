@@ -1,10 +1,3 @@
-/*
- * @Description:
- * @Author: wujian
- * @Date: 2021-11-04 11:17:33
- * @LastEditors: wujian
- * @LastEditTime: 2022-01-06 11:51:25
- */
 import React, { useEffect, useState } from "react";
 import { testOption } from "./utils";
 import { Popover, Spin } from "antd";

@@ -1,10 +1,3 @@
-/*
- * @Description:
- * @Author: wujian
- * @Date: 2021-10-23 11:04:19
- * @LastEditors: wujian
- * @LastEditTime: 2021-10-23 11:56:10
- */
 import React, { useEffect, useState } from "react";
 import { Button, Layout, Rate } from "antd";
 import { useHistory, useLocation } from "react-router-dom";

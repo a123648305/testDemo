@@ -1,10 +1,3 @@
-<!--
- * @Description: 
- * @Author: wujian
- * @Date: 2021-09-01 11:03:18
- * @LastEditors: wujian
- * @LastEditTime: 2021-09-13 18:09:04
--->
 <template>
   <div class="demo">
     <el-tag
@@ -26,7 +19,7 @@
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
       tags: [
         // { name: '标签一', type: '' },
@@ -39,7 +32,7 @@ export default {
     }
   },
   methods: {
-    keydown (val) {
+    keydown(val) {
       //   if (this.tags.includes(val)) return
       this.tags.push(val)
       this.text = ''
